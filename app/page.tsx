@@ -1,3 +1,5 @@
+import Search from "./components/Search";
+
 export default function Home() {
   return (
     <div>
@@ -6,6 +8,7 @@ export default function Home() {
         Browse and find the things you are looking for. Postly is a platform for
         you to find the things you need.
       </p>
+      <Search />
     </div>
   );
 }
