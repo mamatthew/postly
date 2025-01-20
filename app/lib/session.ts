@@ -10,7 +10,7 @@ export async function createSession(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const expiresAt = new Date(Date.now() + 45 * 1000);
+  const expiresAt = new Date(Date.now() + 60 * 60 * 1000); // 1 hour
   const session = await encrypt({ userId, expiresAt });
 
   setCookie("session", session, {

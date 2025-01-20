@@ -6,6 +6,7 @@ SELECT
   "createdAt",
   "updatedAt",
   "userId",
+  "imageUrls",
   ts_rank_cd(
     setweight(to_tsvector('english', title), 'A') ||
     setweight(to_tsvector('english', description), 'B'),

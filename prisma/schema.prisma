@@ -34,9 +34,9 @@ model Listing {
   updatedAt   DateTime @updatedAt
   userId      String
   user        User     @relation(fields: [userId], references: [id])
-  images      Image[]
   category    Category
   saved_by    User[]   @relation("Saved_Listings")
+  imageUrls   String[]
 }
 
 enum Category {
@@ -54,13 +54,6 @@ enum Category {
   MISCELLANEOUS
   KIDS_BABY
   HEALTH_FITNESS
-}
-
-model Image {
-  id        String   @id @default(uuid())
-  url       String
-  listingId String
-  listing   Listing  @relation(fields: [listingId], references: [id])
 }
 
 

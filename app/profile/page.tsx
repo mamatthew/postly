@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 export default function Profile() {
@@ -41,6 +42,11 @@ export default function Profile() {
       <h1>Profile</h1>
       <p>Welcome, {user.username}!</p>
       <p>Email: {user.email}</p>
+      <Link href="/create-listing">
+        <button>Create New Listing</button>
+      </Link>
+      <div>Your listings...</div>
+      <div>Your Saved Listings...</div>
       <button onClick={handleLogout}>Logout</button>
     </div>
   );
