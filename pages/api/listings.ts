@@ -40,8 +40,26 @@ export default async function handler(
     } catch (error) {
       res.status(500).json({ message: "Internal server error", error });
     }
+  } else if (req.method === "DELETE") {
+    const { listingId } = req.query;
+    console.log("Listing ID", listingId);
+    if (!listingId || typeof listingId !== "string") {
+      return res.status(400).json({ error: "Listing ID is required" });
+    }
+
+    try {
+      await prisma.listing.delete({
+        where: {
+          id: listingId,
+        },
+      });
+
+      res.status(204).end();
+    } catch (error) {
+      res.status(500).json({ message: "Internal server error", error });
+    }
   } else {
-    res.setHeader("Allow", ["POST"]);
+    res.setHeader("Allow", ["POST", "DELETE"]);
     res.status(405).end(`Method ${req.method} Not Allowed`);
   }
 }

@@ -23,14 +23,20 @@ export default async function handler(
 
     const user = await prisma.user.findUnique({
       where: { id: payload.userId },
+      include: {
+        listings: true,
+        saved_listings: true,
+      },
     });
 
     if (!user) {
       return res.status(404).json({ message: "User not found" });
     }
 
-    return res
-      .status(200)
-      .json({ user: { username: user.username, email: user.email } });
+    return res.status(200).json({
+      user: { username: user.username, email: user.email },
+      listings: user.listings,
+      savedListings: user.saved_listings,
+    });
   }
 }
