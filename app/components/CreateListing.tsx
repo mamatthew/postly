@@ -59,11 +59,11 @@ export default function CreateListing() {
         ),
       });
 
-      const { urls } = await res.json();
+      const { presignedUrls, objectUrls } = await res.json();
 
       await Promise.all(
         formData.images.map((image, index) =>
-          fetch(urls[index], {
+          fetch(presignedUrls[index], {
             method: "PUT",
             headers: {
               "Content-Type": image.type,
@@ -80,7 +80,7 @@ export default function CreateListing() {
         },
         body: JSON.stringify({
           ...formData,
-          images: urls,
+          images: objectUrls,
         }),
       });
 

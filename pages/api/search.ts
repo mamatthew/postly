@@ -15,7 +15,27 @@ export default async function handler(
       return res.status(400).json({ error: "Query parameter is required" });
     }
 
-    const results = await prisma.$queryRawTyped(searchListings(query));
-    res.status(200).json(results);
+    try {
+      const results = await prisma.$queryRawTyped(searchListings(query));
+
+      // log the results to the console
+      console.log("Results", results);
+
+      const listings = results.map((listing) => ({
+        ...listing,
+        imageUrl:
+          listing.imageUrls && listing.imageUrls.length > 0
+            ? listing.imageUrls[0]
+            : "/placeholder.jpg",
+      }));
+
+      res.status(200).json(listings);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ message: "Internal server error" });
+    }
+  } else {
+    res.setHeader("Allow", ["GET"]);
+    res.status(405).end(`Method ${req.method} Not Allowed`);
   }
 }

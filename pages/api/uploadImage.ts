@@ -35,10 +35,16 @@ export default async function handler(
           };
           console.log("fetching signed url for", key);
           const url = await s3.getSignedUrlPromise("putObject", params);
-          return url;
+          const objectUrl = `https://${process.env.AWS_S3_POSTLY_LISTINGS_BUCKET}.s3.${process.env.AWS_REGION}.amazonaws.com/${key}`;
+          console.log("object url", objectUrl);
+          return { url, objectUrl };
         })
       );
-      res.status(200).json({ urls });
+
+      const presignedUrls = urls.map((item) => item.url);
+      const objectUrls = urls.map((item) => item.objectUrl);
+
+      res.status(200).json({ presignedUrls, objectUrls });
     } catch (error) {
       console.error(error);
       res.status(500).json({ message: "Internal server error" });

@@ -30,7 +30,7 @@ export default async function handler(
           description,
           price: parseFloat(price),
           category,
-          images,
+          imageUrls: images,
           userId: session.userId, // Ensure userId is provided
         },
       });
