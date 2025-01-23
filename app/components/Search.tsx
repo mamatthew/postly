@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState, AppDispatch } from "@/app/store";
@@ -9,9 +9,11 @@ import {
   unsaveListing,
   fetchUserProfile,
 } from "@/app/store/userSlice";
+import { Category } from "@prisma/client";
 
 export default function Search() {
   const [query, setQuery] = useState("");
+  const [category, setCategory] = useState<Category | "All">("All");
   const [listings, setListings] = useState([]);
   const router = useRouter();
   const dispatch = useDispatch<AppDispatch>();
@@ -23,10 +25,16 @@ export default function Search() {
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
     if (query.trim()) {
-      const res = await fetch(`/api/search?query=${query}`);
+      const res = await fetch(
+        `/api/search?query=${query}&category=${
+          category !== "All" ? category : ""
+        }`
+      );
       const data = await res.json();
       setListings(data);
-      router.push(`/?query=${query}`);
+      router.push(
+        `/?query=${query}&category=${category !== "All" ? category : ""}`
+      );
     }
   };
 
@@ -50,6 +58,17 @@ export default function Search() {
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search for listings..."
         />
+        <select
+          value={category}
+          onChange={(e) => setCategory(e.target.value as Category | "All")}
+        >
+          <option value="All">All</option>
+          {Object.values(Category).map((cat) => (
+            <option key={cat} value={cat}>
+              {cat}
+            </option>
+          ))}
+        </select>
         <button type="submit">Search</button>
       </form>
       <div>

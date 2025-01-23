@@ -1,6 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { PrismaClient } from "@prisma/client";
-import { searchListings } from "@prisma/client/sql";
+import { searchListings, searchListingsByCategory } from "@prisma/client/sql";
+import { Category } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
@@ -22,14 +23,21 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (req.method === "GET") {
-    const { query } = req.query;
-    console.log("query", query);
+    const { query, category } = req.query;
+    console.log("query", query, "category", category);
     if (!query || typeof query !== "string") {
       return res.status(400).json({ error: "Query parameter is required" });
     }
 
     try {
-      const results = await prisma.$queryRawTyped(searchListings(query));
+      let results;
+      if (category && typeof category === "string" && category !== "All") {
+        results = await prisma.$queryRawTyped(
+          searchListingsByCategory(query, category as keyof typeof Category)
+        );
+      } else {
+        results = await prisma.$queryRawTyped(searchListings(query));
+      }
 
       // log the results to the console
       console.log("Results", results);
@@ -44,8 +52,7 @@ export default async function handler(
 
       res.status(200).json(listings);
     } catch (error) {
-      console.error(error);
-      res.status(500).json({ message: "Internal server error" });
+      res.status(500).json({ message: "Internal server error ", error });
     }
   } else {
     res.setHeader("Allow", ["GET"]);
