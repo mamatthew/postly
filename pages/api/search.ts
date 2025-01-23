@@ -4,6 +4,19 @@ import { searchListings } from "@prisma/client/sql";
 
 const prisma = new PrismaClient();
 
+export interface Listing {
+  imageUrl: string;
+  id: string;
+  title: string;
+  description: string;
+  price: number;
+  createdAt: Date;
+  updatedAt: Date;
+  userId: string;
+  imageUrls: string[] | null;
+  rank: number | null;
+}
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -21,7 +34,7 @@ export default async function handler(
       // log the results to the console
       console.log("Results", results);
 
-      const listings = results.map((listing) => ({
+      const listings: Listing[] = results.map((listing) => ({
         ...listing,
         imageUrl:
           listing.imageUrls && listing.imageUrls.length > 0

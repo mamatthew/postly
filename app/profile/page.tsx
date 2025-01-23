@@ -1,38 +1,39 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useDispatch, useSelector } from "react-redux";
+import type { RootState, AppDispatch } from "@/app/store";
+import {
+  fetchUserProfile,
+  clearUserListings,
+  clearSavedListings,
+} from "@/app/store/userSlice";
 
 export default function Profile() {
-  const [user, setUser] = useState<{ username: string; email: string } | null>(
-    null
-  );
-  const [listings, setListings] = useState([]);
-  const [savedListings, setSavedListings] = useState([]);
+  const dispatch = useDispatch<AppDispatch>();
   const router = useRouter();
+  const user = useSelector((state: RootState) => state.user);
 
   useEffect(() => {
-    const fetchUserProfile = async () => {
-      const response = await fetch("/api/profile");
-      if (response.ok) {
-        const result = await response.json();
-        setUser(result.user);
-        setListings(result.listings);
-        setSavedListings(result.savedListings);
-      } else {
+    const fetchUserProfileData = async () => {
+      const resultAction = await dispatch(fetchUserProfile());
+      if (fetchUserProfile.rejected.match(resultAction)) {
         router.push("/");
       }
     };
 
-    fetchUserProfile();
-  }, [router]);
+    fetchUserProfileData();
+  }, [router, dispatch]);
 
   const handleLogout = async () => {
     const response = await fetch("/api/logout", {
       method: "POST",
     });
     if (response.ok) {
+      dispatch(clearUserListings());
+      dispatch(clearSavedListings());
       router.push("/");
     }
   };
@@ -42,7 +43,7 @@ export default function Profile() {
       method: "DELETE",
     });
     if (response.ok) {
-      setListings(listings.filter((listing) => listing.id !== listingId));
+      dispatch(fetchUserProfile());
     }
   };
 
@@ -53,16 +54,16 @@ export default function Profile() {
   return (
     <div>
       <h1>Profile</h1>
-      <p>Welcome, {user.username}!</p>
+      <p>Welcome, {user.name}!</p>
       <p>Email: {user.email}</p>
       <Link href="/create-listing">
         <button>Create New Listing</button>
       </Link>
       <div>
         <h2>Your Listings</h2>
-        {listings.length > 0 ? (
+        {user.listings.length > 0 ? (
           <ul>
-            {listings.map((listing) => (
+            {user.listings.map((listing) => (
               <li key={listing.id}>
                 <h3>{listing.title}</h3>
                 <img
@@ -90,9 +91,9 @@ export default function Profile() {
       </div>
       <div>
         <h2>Your Saved Listings</h2>
-        {savedListings.length > 0 ? (
+        {user.savedListings.length > 0 ? (
           <ul>
-            {savedListings.map((listing) => (
+            {user.savedListings.map((listing) => (
               <li key={listing.id}>
                 <h3>{listing.title}</h3>
                 <img
@@ -107,6 +108,7 @@ export default function Profile() {
                 />
                 <p>{listing.description}</p>
                 <p>${listing.price}</p>
+                {listing.userId !== user.id && <button>Save</button>}
               </li>
             ))}
           </ul>

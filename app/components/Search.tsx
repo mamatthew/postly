@@ -1,12 +1,24 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { useDispatch, useSelector } from "react-redux";
+import type { RootState, AppDispatch } from "@/app/store";
+import {
+  saveListing,
+  unsaveListing,
+  fetchUserProfile,
+} from "@/app/store/userSlice";
 
 export default function Search() {
   const [query, setQuery] = useState("");
   const [listings, setListings] = useState([]);
   const router = useRouter();
+  const dispatch = useDispatch<AppDispatch>();
+  const isLoggedIn = useSelector((state: RootState) => state.user.id !== "");
+  const savedListings = useSelector(
+    (state: RootState) => state.user.savedListings
+  );
 
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -16,6 +28,17 @@ export default function Search() {
       setListings(data);
       router.push(`/?query=${query}`);
     }
+  };
+
+  const handleSave = async (listingId: string) => {
+    if (savedListings.some((listing) => listing.id === listingId)) {
+      console.log("unsaving listing");
+      await dispatch(unsaveListing(listingId));
+    } else {
+      console.log("saving listing");
+      await dispatch(saveListing(listingId));
+    }
+    dispatch(fetchUserProfile());
   };
 
   return (
@@ -43,6 +66,13 @@ export default function Search() {
                 <h2>{listing.title}</h2>
                 <p>{listing.description}</p>
                 <p>${listing.price}</p>
+                {isLoggedIn && (
+                  <button onClick={() => handleSave(listing.id)}>
+                    {savedListings.some((saved) => saved.id === listing.id)
+                      ? "Unsave"
+                      : "Save"}
+                  </button>
+                )}
               </li>
             ))}
           </ul>

@@ -8,15 +8,6 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if (!req.cookies.session) {
-    return res.status(401).json({ message: "Unauthorized" });
-  }
-
-  const session = await decrypt(req.cookies.session);
-  if (!session?.userId) {
-    return res.status(401).json({ message: "Unauthorized" });
-  }
-
   const { listingId } = req.query;
   if (!listingId || typeof listingId !== "string") {
     return res.status(400).json({ error: "Listing ID is required" });
@@ -54,8 +45,30 @@ export default async function handler(
     } catch (error) {
       res.status(500).json({ message: "Internal server error", error });
     }
+  } else if (req.method === "POST") {
+    const { title, description, price, category, images } = req.body;
+    const session = await decrypt(req.cookies.session);
+    if (!session?.userId) {
+      return res.status(401).json({ message: "Unauthorized" });
+    }
+
+    try {
+      const listing = await prisma.listing.create({
+        data: {
+          title,
+          description,
+          price: parseFloat(price),
+          category,
+          imageUrls: images,
+          userId: session.userId,
+        },
+      });
+      res.status(201).json(listing);
+    } catch (error) {
+      res.status(500).json({ message: "Internal server error", error });
+    }
   } else {
-    res.setHeader("Allow", ["GET", "PUT", "DELETE"]);
+    res.setHeader("Allow", ["GET", "PUT", "DELETE", "POST"]);
     res.status(405).end(`Method ${req.method} Not Allowed`);
   }
 }

@@ -1,38 +1,38 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Link from "next/link";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
+import { useDispatch, useSelector } from "react-redux";
+import type { RootState, AppDispatch } from "@/app/store";
+import {
+  fetchUserProfile,
+  clearUserListings,
+  clearSavedListings,
+  clearUser,
+} from "@/app/store/userSlice";
 
 export default function Navbar() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const dispatch = useDispatch<AppDispatch>();
   const router = useRouter();
+  const user = useSelector((state: RootState) => state.user);
+  const isLoggedIn = user.id !== "";
+  const savedListingsCount = user.savedListings.length;
 
-  const checkLoginStatus = async () => {
-    const response = await fetch("/api/profile");
-    if (response.ok) {
-      setIsLoggedIn(true);
-    } else {
-      setIsLoggedIn(false);
+  useEffect(() => {
+    if (isLoggedIn) {
+      dispatch(fetchUserProfile());
     }
-  };
-
-  useEffect(() => {
-    checkLoginStatus();
-  }, []);
-
-  const pathname = usePathname();
-
-  useEffect(() => {
-    checkLoginStatus();
-  }, [pathname]);
+  }, [dispatch, isLoggedIn]);
 
   const handleLogout = async () => {
     const response = await fetch("/api/logout", {
       method: "POST",
     });
     if (response.ok) {
-      setIsLoggedIn(false);
+      dispatch(clearUserListings());
+      dispatch(clearSavedListings());
+      dispatch(clearUser());
       router.push("/");
     }
   };
@@ -43,12 +43,15 @@ export default function Navbar() {
         <button>Home</button>
       </Link>
       {isLoggedIn ? (
-        <>
+        <div>
           <Link href="/profile">
             <button>Your Account</button>
           </Link>
+          <Link href="/saved-listings">
+            <button>Saved Listings ({savedListingsCount})</button>
+          </Link>
           <button onClick={handleLogout}>Logout</button>
-        </>
+        </div>
       ) : (
         <>
           <Link href="/signup">

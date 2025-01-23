@@ -10,7 +10,6 @@ export default async function handler(
     console.log("GET /api/profile");
     const prisma = new PrismaClient();
     const session = req.cookies.session;
-    console.log("session", session);
     if (!session) {
       return res.status(401).json({ message: "Unauthorized" });
     }
@@ -32,11 +31,6 @@ export default async function handler(
     if (!user) {
       return res.status(404).json({ message: "User not found" });
     }
-
-    return res.status(200).json({
-      user: { username: user.username, email: user.email },
-      listings: user.listings,
-      savedListings: user.saved_listings,
-    });
+    return res.status(200).json(user);
   }
 }
