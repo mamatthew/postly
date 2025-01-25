@@ -9,11 +9,12 @@ import {
   unsaveListing,
   fetchUserProfile,
 } from "@/app/store/userSlice";
-import { Category } from "@prisma/client";
+import { Category, Location } from "@prisma/client";
 
 export default function Search() {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<Category | "All">("All");
+  const [location, setLocation] = useState<Location | "All">("All");
   const [listings, setListings] = useState([]);
   const router = useRouter();
   const dispatch = useDispatch<AppDispatch>();
@@ -28,12 +29,14 @@ export default function Search() {
       const res = await fetch(
         `/api/search?query=${query}&category=${
           category !== "All" ? category : ""
-        }`
+        }&location=${location !== "All" ? location : ""}`
       );
       const data = await res.json();
       setListings(data);
       router.push(
-        `/?query=${query}&category=${category !== "All" ? category : ""}`
+        `/?query=${query}&category=${
+          category !== "All" ? category : ""
+        }&location=${location !== "All" ? location : ""}`
       );
     }
   };
@@ -52,23 +55,46 @@ export default function Search() {
   return (
     <div>
       <form onSubmit={handleSearch}>
-        <input
-          type="text"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search for listings..."
-        />
-        <select
-          value={category}
-          onChange={(e) => setCategory(e.target.value as Category | "All")}
-        >
-          <option value="All">All</option>
-          {Object.values(Category).map((cat) => (
-            <option key={cat} value={cat}>
-              {cat}
-            </option>
-          ))}
-        </select>
+        <div>
+          <label htmlFor="query">Search Query:</label>
+          <input
+            type="text"
+            id="query"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Search for listings..."
+          />
+        </div>
+        <div>
+          <label htmlFor="category">Category:</label>
+          <select
+            id="category"
+            value={category}
+            onChange={(e) => setCategory(e.target.value as Category | "All")}
+          >
+            <option value="All">All</option>
+            {Object.values(Category).map((cat) => (
+              <option key={cat} value={cat}>
+                {cat}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label htmlFor="location">Location:</label>
+          <select
+            id="location"
+            value={location}
+            onChange={(e) => setLocation(e.target.value as Location | "All")}
+          >
+            <option value="All">All</option>
+            {Object.values(Location).map((loc) => (
+              <option key={loc} value={loc}>
+                {loc}
+              </option>
+            ))}
+          </select>
+        </div>
         <button type="submit">Search</button>
       </form>
       <div>

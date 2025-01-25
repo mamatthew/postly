@@ -7,6 +7,11 @@ interface Listing {
   price: number;
   imageUrls: string[];
   userId: string;
+  category: string;
+  city: string;
+  postalCode: string;
+  email: string;
+  location: string;
 }
 
 interface User {
@@ -21,10 +26,12 @@ interface User {
 export const fetchUserProfile = createAsyncThunk(
   "user/fetchProfile",
   async () => {
+    console.log("fetching user profile from async thunk");
     const response = await fetch("/api/profile");
     if (response.ok) {
       return response.json();
     }
+    throw new Error("Failed to fetch user profile");
   }
 );
 
@@ -42,9 +49,15 @@ export const deleteListing = createAsyncThunk(
 
 export const editListing = createAsyncThunk(
   "listings/editListing",
-  async ({ listingId, updatedData }) => {
+  async ({
+    listingId,
+    updatedData,
+  }: {
+    listingId: string;
+    updatedData: Partial<Listing>;
+  }) => {
     const response = await fetch(`/api/listings/${listingId}`, {
-      method: "PATCH",
+      method: "PUT",
       body: JSON.stringify(updatedData),
       headers: { "Content-Type": "application/json" },
     });
@@ -115,14 +128,18 @@ const userSlice = createSlice({
         state.status = "loading";
       })
       .addCase(fetchUserProfile.fulfilled, (state, action) => {
-        const { id, email, username, listings, saved_listings } =
-          action.payload;
-        state.id = id;
-        state.email = email;
-        state.name = username;
-        state.listings = listings;
-        state.savedListings = saved_listings;
-        state.status = "succeeded";
+        if (action.payload) {
+          const { id, email, username, listings, saved_listings } =
+            action.payload;
+          state.id = id;
+          state.email = email;
+          state.name = username;
+          state.listings = listings;
+          state.savedListings = saved_listings;
+          state.status = "succeeded";
+        } else {
+          state.status = "failed";
+        }
       })
       .addCase(fetchUserProfile.rejected, (state) => {
         state.status = "failed";

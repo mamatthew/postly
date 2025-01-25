@@ -2,13 +2,19 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { Category, Location } from "@prisma/client";
 
 interface FormData {
   title: string;
   description: string;
   price: string;
-  category: string;
+  category: Category;
   images: File[];
+  city: string;
+  postalCode: string;
+  email: string;
+  location: Location;
+  area: string;
 }
 
 export default function CreateListing() {
@@ -16,8 +22,13 @@ export default function CreateListing() {
     title: "",
     description: "",
     price: "",
-    category: "MISCELLANEOUS",
+    category: Category.MISCELLANEOUS,
     images: [],
+    city: "",
+    postalCode: "",
+    email: "",
+    area: "",
+    location: Location.CITY_OF_VANCOUVER,
   });
   const router = useRouter();
 
@@ -136,25 +147,60 @@ export default function CreateListing() {
             onChange={handleChange}
             required
           >
-            <option value="ELECTRONICS">Electronics</option>
-            <option value="FURNITURE">Furniture</option>
-            <option value="CLOTHING">Clothing</option>
-            <option value="TOOLS">Tools</option>
-            <option value="BOOKS">Books</option>
-            <option value="PETS">Pets</option>
-            <option value="TOYS">Toys</option>
-            <option value="HOBBIES_LEISURE">Hobbies & Leisure</option>
-            <option value="FASHION_BEAUTY">Fashion & Beauty</option>
-            <option value="SPORTS">Sports</option>
-            <option value="HOME">Home</option>
-            <option value="MISCELLANEOUS">Miscellaneous</option>
-            <option value="KIDS_BABY">Kids & Baby</option>
-            <option value="HEALTH_FITNESS">Health & Fitness</option>
+            {Object.values(Category).map((cat) => (
+              <option key={cat} value={cat}>
+                {cat}
+              </option>
+            ))}
           </select>
         </div>
         <div>
           <label>Images</label>
           <input type="file" multiple onChange={handleImageUpload} />
+        </div>
+        <div>
+          <label>City</label>
+          <input
+            type="text"
+            name="city"
+            value={formData.city}
+            onChange={handleChange}
+          />
+        </div>
+        <div>
+          <label>Postal Code</label>
+          <input
+            type="text"
+            name="postalCode"
+            value={formData.postalCode}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label>Email Address</label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label>Location</label>
+          <select
+            name="location"
+            value={formData.location}
+            onChange={handleChange}
+            required
+          >
+            {Object.values(Location).map((loc) => (
+              <option key={loc} value={loc}>
+                {loc}
+              </option>
+            ))}
+          </select>
         </div>
         <button type="submit">Create Listing</button>
       </form>

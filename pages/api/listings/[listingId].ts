@@ -26,11 +26,31 @@ export default async function handler(
       res.status(500).json({ message: "Internal server error", error });
     }
   } else if (req.method === "PUT") {
-    const { title, description, price, imageUrls } = req.body;
+    const {
+      title,
+      description,
+      price,
+      imageUrls,
+      city,
+      postalCode,
+      email,
+      location,
+      category,
+    } = req.body;
     try {
       const updatedListing = await prisma.listing.update({
         where: { id: listingId },
-        data: { title, description, price: parseFloat(price), imageUrls },
+        data: {
+          title,
+          description,
+          price: parseFloat(price),
+          imageUrls,
+          city,
+          postalCode,
+          email,
+          location,
+          category,
+        },
       });
       res.status(200).json(updatedListing);
     } catch (error) {

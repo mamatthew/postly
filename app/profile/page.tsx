@@ -89,33 +89,6 @@ export default function Profile() {
           <p>No listings found</p>
         )}
       </div>
-      <div>
-        <h2>Your Saved Listings</h2>
-        {user.savedListings.length > 0 ? (
-          <ul>
-            {user.savedListings.map((listing) => (
-              <li key={listing.id}>
-                <h3>{listing.title}</h3>
-                <img
-                  src={
-                    listing.imageUrls.length > 0
-                      ? listing.imageUrls[0]
-                      : "/placeholder.jpg"
-                  }
-                  alt={listing.title}
-                  width="100"
-                  height="100"
-                />
-                <p>{listing.description}</p>
-                <p>${listing.price}</p>
-                {listing.userId !== user.id && <button>Save</button>}
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p>No saved listings found</p>
-        )}
-      </div>
       <button onClick={handleLogout}>Logout</button>
     </div>
   );

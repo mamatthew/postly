@@ -17,8 +17,7 @@ FROM
 WHERE
   (to_tsvector('english', title) @@ plainto_tsquery('english', $1) OR
   to_tsvector('english', description) @@ plainto_tsquery('english', $1))
-  AND ($2::text IS NULL OR category::text = $2)
-  AND ($3::text IS NULL OR location::text = $3)
+  AND category::text = $2
+  AND location::text = $3
 ORDER BY
   rank DESC;
-

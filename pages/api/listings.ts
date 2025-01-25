@@ -9,22 +9,44 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (req.method === "POST") {
-    const { listingIds } = req.body;
-    console.log("Listing IDs", listingIds);
-    if (!Array.isArray(listingIds)) {
-      return res.status(400).json({ error: "Invalid request body" });
+    const {
+      title,
+      description,
+      price,
+      category,
+      images,
+      city,
+      postalCode,
+      email,
+      location,
+    } = req.body;
+
+    if (!req.cookies.session) {
+      return res.status(401).json({ message: "Unauthorized" });
+    }
+
+    const session = await decrypt(req.cookies.session);
+    if (!session?.userId) {
+      return res.status(401).json({ message: "Unauthorized" });
     }
 
     try {
-      const listings = await prisma.listing.findMany({
-        where: {
-          id: {
-            in: listingIds,
-          },
+      const newListing = await prisma.listing.create({
+        data: {
+          title,
+          description,
+          price: parseFloat(price),
+          category,
+          imageUrls: images,
+          city,
+          postalCode,
+          email,
+          location,
+          userId: session.userId,
         },
       });
 
-      res.status(200).json(listings);
+      res.status(201).json(newListing);
     } catch (error) {
       res.status(500).json({ message: "Internal server error", error });
     }
