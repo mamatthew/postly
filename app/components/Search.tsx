@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState, AppDispatch } from "@/app/store";
 import {
@@ -111,6 +112,9 @@ export default function Search() {
                 <h2>{listing.title}</h2>
                 <p>{listing.description}</p>
                 <p>${listing.price}</p>
+                <Link href={`/listings/${listing.id}`}>
+                  <button>Details</button>
+                </Link>
                 {isLoggedIn && (
                   <button onClick={() => handleSave(listing.id)}>
                     {savedListings.some((saved) => saved.id === listing.id)
