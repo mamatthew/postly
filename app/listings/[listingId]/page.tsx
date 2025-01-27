@@ -40,7 +40,7 @@ export default function ListingPage() {
     fetchListing();
   }, [listingId]);
 
-  if (!listing || !coordinates) {
+  if (!listing) {
     return <div>Loading...</div>;
   }
 
@@ -72,19 +72,21 @@ export default function ListingPage() {
         <p>Posted on: {new Date(listing.createdAt).toLocaleDateString()}</p>
         <p>Last updated: {new Date(listing.updatedAt).toLocaleDateString()}</p>
       </div>
-      <div style={{ flex: 1 }}>
-        <MapContainer
-          center={[coordinates.lat, coordinates.lng]}
-          zoom={12}
-          style={{ height: "300px", width: "300px" }}
-        >
-          <TileLayer
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          />
-          <Circle center={[coordinates.lat, coordinates.lng]} radius={1500} />
-        </MapContainer>
-      </div>
+      {coordinates && (
+        <div style={{ flex: 1 }}>
+          <MapContainer
+            center={[coordinates.lat, coordinates.lng]}
+            zoom={12}
+            style={{ height: "300px", width: "300px" }}
+          >
+            <TileLayer
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            />
+            <Circle center={[coordinates.lat, coordinates.lng]} radius={1500} />
+          </MapContainer>
+        </div>
+      )}
     </div>
   );
 }

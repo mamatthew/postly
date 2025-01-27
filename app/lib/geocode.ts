@@ -7,7 +7,6 @@ export async function geocode(postalCode: string, city: string) {
     if (data.latt && data.longt) {
       return { lat: parseFloat(data.latt), lng: parseFloat(data.longt) };
     } else {
-      alert("Location not found!");
       return null;
     }
   } catch (error) {
