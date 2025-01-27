@@ -10,30 +10,28 @@ import {
   unsaveListing,
   fetchUserProfile,
 } from "@/app/store/userSlice";
+import { fetchSearchResults } from "@/app/store/searchResultSlice";
 import { Category, Location } from "@prisma/client";
 
 export default function Search() {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<Category | "All">("All");
   const [location, setLocation] = useState<Location | "All">("All");
-  const [listings, setListings] = useState([]);
   const router = useRouter();
   const dispatch = useDispatch<AppDispatch>();
   const isLoggedIn = useSelector((state: RootState) => state.user.id !== "");
   const savedListings = useSelector(
     (state: RootState) => state.user.savedListings
   );
+  const listings = useSelector(
+    (state: RootState) => state.searchResults.listings
+  );
 
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log("Search parameters:", { query, category, location });
     if (query.trim()) {
-      const res = await fetch(
-        `/api/search?query=${query}&category=${
-          category !== "All" ? category : ""
-        }&location=${location !== "All" ? location : ""}`
-      );
-      const data = await res.json();
-      setListings(data);
+      await dispatch(fetchSearchResults({ query, category, location }));
       router.push(
         `/?query=${query}&category=${
           category !== "All" ? category : ""
