@@ -1,0 +1,127 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useDispatch, useSelector } from "react-redux";
+import type { RootState, AppDispatch } from "@/app/store";
+import {
+  fetchSearchResults,
+  setCurrentListingIndex,
+} from "@/app/store/searchResultSlices";
+import { Category, Location } from "@prisma/client";
+import Link from "next/link";
+
+export default function SearchPage() {
+  const [query, setQuery] = useState("");
+  const [category, setCategory] = useState<Category | "All">("All");
+  const [location, setLocation] = useState<Location | "All">("All");
+  const router = useRouter();
+  const dispatch = useDispatch<AppDispatch>();
+  const listings = useSelector(
+    (state: RootState) => state.searchResults.listings
+  );
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const queryParam = searchParams.get("query") || "";
+    const categoryParam = searchParams.get("category") || "All";
+    const locationParam = searchParams.get("location") || "All";
+
+    setQuery(queryParam);
+    setCategory(categoryParam as Category | "All");
+    setLocation(locationParam as Location | "All");
+
+    dispatch(
+      fetchSearchResults({
+        query: queryParam,
+        category: categoryParam,
+        location: locationParam,
+      })
+    );
+  }, [searchParams, dispatch]);
+
+  const handleSearch = async (e: React.FormEvent) => {
+    e.preventDefault();
+    router.push(
+      `/search-listings?query=${query}&category=${
+        category !== "All" ? category : ""
+      }&location=${location !== "All" ? location : ""}`
+    );
+  };
+
+  const handleDetails = (index: number) => {
+    dispatch(setCurrentListingIndex(index));
+  };
+
+  return (
+    <div>
+      <form onSubmit={handleSearch}>
+        <div>
+          <label htmlFor="query">Search Query:</label>
+          <input
+            type="text"
+            id="query"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Search for listings..."
+          />
+        </div>
+        <div>
+          <label htmlFor="category">Category:</label>
+          <select
+            id="category"
+            value={category}
+            onChange={(e) => setCategory(e.target.value as Category | "All")}
+          >
+            <option value="All">All</option>
+            {Object.values(Category).map((cat) => (
+              <option key={cat} value={cat}>
+                {cat}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label htmlFor="location">Location:</label>
+          <select
+            id="location"
+            value={location}
+            onChange={(e) => setLocation(e.target.value as Location | "All")}
+          >
+            <option value="All">All</option>
+            {Object.values(Location).map((loc) => (
+              <option key={loc} value={loc}>
+                {loc}
+              </option>
+            ))}
+          </select>
+        </div>
+        <button type="submit">Search</button>
+      </form>
+      <div>
+        {listings.length > 0 ? (
+          <ul>
+            {listings.map((listing, index) => (
+              <li key={listing.id}>
+                <img
+                  src={listing.imageUrl}
+                  alt={listing.title}
+                  width="100"
+                  height="100"
+                />
+                <h2>{listing.title}</h2>
+                <p>{listing.description}</p>
+                <p>${listing.price}</p>
+                <Link href={`/listings/${listing.id}`}>
+                  <button onClick={() => handleDetails(index)}>Details</button>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p>No listings found</p>
+        )}
+      </div>
+    </div>
+  );
+}

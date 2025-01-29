@@ -47,7 +47,7 @@ export default function Navbar() {
           <Link href="/profile">
             <button>Your Account</button>
           </Link>
-          <Link href="/saved-listings">
+          <Link href="/profile/saved-listings">
             <button>Saved Listings ({savedListingsCount})</button>
           </Link>
           <button onClick={handleLogout}>Logout</button>

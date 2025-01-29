@@ -1,18 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-
-interface Listing {
-  id: string;
-  title: string;
-  description: string;
-  price: number;
-  imageUrls: string[];
-  userId: string;
-  category: string;
-  city: string;
-  postalCode: string;
-  email: string;
-  location: string;
-}
+import { Listing } from "./searchResultSlice";
 
 interface User {
   id: string;

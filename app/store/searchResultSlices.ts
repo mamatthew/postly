@@ -1,21 +1,24 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-interface Listing {
+export interface Listing {
+  imageUrl: string;
   id: string;
   title: string;
   description: string;
   price: number;
-  imageUrls: string[];
+  createdAt: Date;
+  updatedAt: Date;
   userId: string;
+  imageUrls: string[] | null;
   category: string;
   city: string;
   postalCode: string;
-  email: string;
-  location: string;
+  rank: number | null;
 }
 
 interface SearchResultState {
   listings: Listing[];
+  currentListingIndex: number | undefined;
   status: string;
 }
 
@@ -46,6 +49,7 @@ export const fetchSearchResults = createAsyncThunk(
 const initialState: SearchResultState = {
   listings: [],
   status: "idle",
+  currentListingIndex: undefined,
 };
 
 const searchResultSlice = createSlice({
@@ -54,6 +58,9 @@ const searchResultSlice = createSlice({
   reducers: {
     clearSearchResults(state) {
       state.listings = [];
+    },
+    setCurrentListingIndex(state, action) {
+      state.currentListingIndex = action.payload;
     },
   },
   extraReducers: (builder) => {
@@ -71,6 +78,7 @@ const searchResultSlice = createSlice({
   },
 });
 
-export const { clearSearchResults } = searchResultSlice.actions;
+export const { clearSearchResults, setCurrentListingIndex } =
+  searchResultSlice.actions;
 
 export default searchResultSlice.reducer;

@@ -56,7 +56,7 @@ export default function Profile() {
       <h1>Profile</h1>
       <p>Welcome, {user.name}!</p>
       <p>Email: {user.email}</p>
-      <Link href="/create-listing">
+      <Link href="/profile/create-listing">
         <button>Create New Listing</button>
       </Link>
       <div>

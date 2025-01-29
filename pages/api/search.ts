@@ -1,6 +1,9 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { PrismaClient } from "@prisma/client";
-import { searchListings } from "@prisma/client/sql";
+import {
+  searchListings,
+  searchListingsByCategoryOrLocation,
+} from "@prisma/client/sql";
 
 const prisma = new PrismaClient();
 
@@ -14,6 +17,9 @@ export interface Listing {
   updatedAt: Date;
   userId: string;
   imageUrls: string[] | null;
+  category: string;
+  city: string;
+  postalCode: string;
   rank: number | null;
 }
 
@@ -24,18 +30,27 @@ export default async function handler(
   if (req.method === "GET") {
     const { query, category, location } = req.query;
     console.log("query", query, "category", category, "location", location);
-    if (!query || typeof query !== "string") {
-      return res.status(400).json({ error: "Query parameter is required" });
-    }
 
     try {
-      const results = await prisma.$queryRawTyped(
-        searchListings(
-          query,
-          category && category !== "All" ? category : null,
-          location && location !== "All" ? location : null
-        )
-      );
+      let results;
+      if (query && typeof query === "string") {
+        results = await prisma.$queryRawTyped(
+          searchListings(
+            query,
+            category && category !== "All" ? category : null,
+            location && location !== "All" ? location : null
+          )
+        );
+      } else if (category || location) {
+        results = await prisma.$queryRawTyped(
+          searchListingsByCategoryOrLocation(
+            category && category !== "All" ? category : null,
+            location && location !== "All" ? location : null
+          )
+        );
+      } else {
+        return res.status(400).json({ error: "Query parameter is required" });
+      }
 
       // log the results to the console
       console.log("Results", results);

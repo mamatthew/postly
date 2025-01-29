@@ -1,4 +1,5 @@
 import Search from "./components/Search";
+import CategoryDisplay from "./components/CategoryDisplay";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         you to find the things you need.
       </p>
       <Search />
+      <CategoryDisplay />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import CreateListing from "../components/CreateListing";
+import CreateListing from "../../components/CreateListing";
 
 export default function CreateListingPage() {
   return <CreateListing />;
