@@ -31,14 +31,18 @@ export default function SearchPage() {
     setCategory(categoryParam as Category | "All");
     setLocation(locationParam as Location | "All");
 
-    dispatch(
-      fetchSearchResults({
-        query: queryParam,
-        category: categoryParam,
-        location: locationParam,
-      })
-    );
-  }, [searchParams, dispatch]);
+    const fromListingPage = searchParams.get("fromListingPage") === "true";
+
+    if (!fromListingPage || listings.length === 0) {
+      dispatch(
+        fetchSearchResults({
+          query: queryParam,
+          category: categoryParam,
+          location: locationParam,
+        })
+      );
+    }
+  }, [searchParams, dispatch, listings.length]);
 
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -46,6 +50,26 @@ export default function SearchPage() {
       `/search-listings?query=${query}&category=${
         category !== "All" ? category : ""
       }&location=${location !== "All" ? location : ""}`
+    );
+  };
+
+  const handleCategoryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const newCategory = e.target.value as Category | "All";
+    setCategory(newCategory);
+    router.push(
+      `/search-listings?query=${query}&category=${
+        newCategory !== "All" ? newCategory : ""
+      }&location=${location !== "All" ? location : ""}`
+    );
+  };
+
+  const handleLocationChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const newLocation = e.target.value as Location | "All";
+    setLocation(newLocation);
+    router.push(
+      `/search-listings?query=${query}&category=${
+        category !== "All" ? category : ""
+      }&location=${newLocation !== "All" ? newLocation : ""}`
     );
   };
 
@@ -71,7 +95,7 @@ export default function SearchPage() {
           <select
             id="category"
             value={category}
-            onChange={(e) => setCategory(e.target.value as Category | "All")}
+            onChange={handleCategoryChange}
           >
             <option value="All">All</option>
             {Object.values(Category).map((cat) => (
@@ -86,7 +110,7 @@ export default function SearchPage() {
           <select
             id="location"
             value={location}
-            onChange={(e) => setLocation(e.target.value as Location | "All")}
+            onChange={handleLocationChange}
           >
             <option value="All">All</option>
             {Object.values(Location).map((loc) => (
@@ -112,7 +136,9 @@ export default function SearchPage() {
                 <h2>{listing.title}</h2>
                 <p>{listing.description}</p>
                 <p>${listing.price}</p>
-                <Link href={`/listings/${listing.id}`}>
+                <Link
+                  href={`/listings/${listing.id}?query=${query}&category=${category}&location=${location}&fromListingPage=true`}
+                >
                   <button onClick={() => handleDetails(index)}>Details</button>
                 </Link>
               </li>

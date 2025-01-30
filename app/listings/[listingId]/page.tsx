@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter, useSearchParams } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState, AppDispatch } from "@/app/store";
 import { geocode } from "@/app/lib/geocode";
@@ -10,7 +10,9 @@ import "leaflet/dist/leaflet.css";
 import { setCurrentListingIndex } from "@/app/store/searchResultSlices";
 
 export default function ListingPage() {
+  const { listingId } = useParams();
   const router = useRouter();
+  const searchParams = useSearchParams();
   const dispatch = useDispatch<AppDispatch>();
   const listings = useSelector(
     (state: RootState) => state.searchResults.listings
@@ -24,7 +26,13 @@ export default function ListingPage() {
   } | null>(null);
 
   useEffect(() => {
-    console.log("Current listing index:", currentListingIndex);
+    const index = listings.findIndex((listing) => listing.id === listingId);
+    if (index !== -1) {
+      dispatch(setCurrentListingIndex(index));
+    }
+  }, [listingId, listings, dispatch]);
+
+  useEffect(() => {
     if (currentListingIndex !== undefined && listings[currentListingIndex]) {
       const listing = listings[currentListingIndex];
       const fetchCoordinates = async () => {
@@ -59,7 +67,12 @@ export default function ListingPage() {
   };
 
   const handleBackToResults = () => {
-    router.push("/");
+    const query = searchParams.get("query") || "";
+    const category = searchParams.get("category") || "All";
+    const location = searchParams.get("location") || "All";
+    router.push(
+      `/search-listings?query=${query}&category=${category}&location=${location}&fromListingPage=true`
+    );
   };
 
   return (
