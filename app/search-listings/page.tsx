@@ -7,6 +7,7 @@ import type { RootState, AppDispatch } from "@/app/store";
 import {
   fetchSearchResults,
   setCurrentListingIndex,
+  clearSearchResults,
 } from "@/app/store/searchResultsSlice";
 import { Category, Location } from "@prisma/client";
 import Link from "next/link";
@@ -34,7 +35,8 @@ export default function SearchPage() {
 
     const fromListingPage = searchParams.get("fromListingPage") === "true";
 
-    if (!fromListingPage || listings.length === 0) {
+    if (!fromListingPage) {
+      dispatch(clearSearchResults());
       dispatch(
         fetchSearchResults({
           query: queryParam,
@@ -43,10 +45,11 @@ export default function SearchPage() {
         })
       );
     }
-  }, [searchParams, dispatch, listings.length]);
+  }, [searchParams, dispatch]);
 
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
+    dispatch(clearSearchResults());
     router.push(
       `/search-listings?query=${query}&category=${
         category !== "All" ? category : ""
@@ -57,6 +60,7 @@ export default function SearchPage() {
   const handleCategoryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newCategory = e.target.value as Category | "All";
     setCategory(newCategory);
+    dispatch(clearSearchResults());
     router.push(
       `/search-listings?query=${query}&category=${
         newCategory !== "All" ? newCategory : ""
@@ -67,6 +71,7 @@ export default function SearchPage() {
   const handleLocationChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newLocation = e.target.value as Location | "All";
     setLocation(newLocation);
+    dispatch(clearSearchResults());
     router.push(
       `/search-listings?query=${query}&category=${
         category !== "All" ? category : ""

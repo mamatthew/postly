@@ -3,16 +3,19 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Category, Location } from "@prisma/client";
+import { clearSearchResults } from "../store/searchResultsSlice";
+import { useDispatch } from "react-redux";
 
 export default function Search() {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<Category | "All">("All");
   const [location, setLocation] = useState<Location | "All">("All");
   const router = useRouter();
+  const dispatch = useDispatch();
 
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Search parameters:", { query, category, location });
+    // clear the search results
     if (query.trim()) {
       router.push(
         `/search-listings?query=${query}&category=${

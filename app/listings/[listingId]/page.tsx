@@ -18,17 +18,19 @@ export default function ListingPage() {
   const listings = useSelector(
     (state: RootState) => state.searchResults.listings
   );
-  const currentListingIndex = useSelector(
-    (state: RootState) => state.searchResults.currentListingIndex
-  );
+  const [currentListingIndex, setCurrentListingIndexState] = useState<
+    number | undefined
+  >(undefined);
   const [coordinates, setCoordinates] = useState<{
     lat: number;
     lng: number;
   } | null>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const index = listings.findIndex((listing) => listing.id === listingId);
     if (index !== -1) {
+      setCurrentListingIndexState(index);
       dispatch(setCurrentListingIndex(index));
     }
   }, [listingId, listings, dispatch]);
@@ -39,30 +41,33 @@ export default function ListingPage() {
       const fetchCoordinates = async () => {
         const coords = await geocode(listing.postalCode, listing.city);
         setCoordinates(coords);
+        setLoading(false);
         console.log("Coordinates:", coords);
       };
       fetchCoordinates();
     }
   }, [currentListingIndex, listings]);
 
-  if (currentListingIndex === undefined || !listings[currentListingIndex]) {
+  if (
+    loading ||
+    currentListingIndex === undefined ||
+    !listings[currentListingIndex]
+  ) {
     return <div>Loading...</div>;
   }
 
   const listing = listings[currentListingIndex];
 
-  const handlePrevious = () => {
+  const handlePrevious = async () => {
     if (currentListingIndex > 0) {
       const previousListingId = listings[currentListingIndex - 1].id;
-      dispatch(setCurrentListingIndex(currentListingIndex - 1));
       router.push(`/listings/${previousListingId}`);
     }
   };
 
-  const handleNext = () => {
+  const handleNext = async () => {
     if (currentListingIndex < listings.length - 1) {
       const nextListingId = listings[currentListingIndex + 1].id;
-      dispatch(setCurrentListingIndex(currentListingIndex + 1));
       router.push(`/listings/${nextListingId}`);
     }
   };
