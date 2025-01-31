@@ -7,9 +7,10 @@ import type { RootState, AppDispatch } from "@/app/store";
 import {
   fetchSearchResults,
   setCurrentListingIndex,
-} from "@/app/store/searchResultSlices";
+} from "@/app/store/searchResultsSlice";
 import { Category, Location } from "@prisma/client";
 import Link from "next/link";
+import SaveListingButton from "@/app/components/SaveListingButton";
 
 export default function SearchPage() {
   const [query, setQuery] = useState("");
@@ -136,6 +137,7 @@ export default function SearchPage() {
                 <h2>{listing.title}</h2>
                 <p>{listing.description}</p>
                 <p>${listing.price}</p>
+                <SaveListingButton listing={listing} />
                 <Link
                   href={`/listings/${listing.id}?query=${query}&category=${category}&location=${location}&fromListingPage=true`}
                 >

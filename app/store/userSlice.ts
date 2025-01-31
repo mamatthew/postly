@@ -1,5 +1,5 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { Listing } from "./searchResultSlice";
+import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
+import { Listing } from "./searchResultsSlice";
 
 interface User {
   id: string;
@@ -52,30 +52,16 @@ export const editListing = createAsyncThunk(
   }
 );
 
-export const saveListing = createAsyncThunk<string, string>(
+export const toggleSaveListing = createAsyncThunk<Listing, Listing>(
   "listings/saveListing",
-  async (listingId) => {
+  async (listing) => {
+    console.log("entering toggleSaveListing for listing: ", listing);
     const response = await fetch("/api/listings/save", {
       method: "POST",
-      body: JSON.stringify({ listingId }),
+      body: JSON.stringify({ listingId: listing.id }),
       headers: { "Content-Type": "application/json" },
     });
     return response.json(); // Return the saved listing data
-  }
-);
-
-export const unsaveListing = createAsyncThunk<string, string>(
-  "listings/unsaveListing",
-  async (listingId) => {
-    const response = await fetch("/api/listings/save", {
-      method: "DELETE",
-      body: JSON.stringify({ listingId }),
-      headers: { "Content-Type": "application/json" },
-    });
-    if (response.ok) {
-      return listingId; // Return the ID of the unsaved listing
-    }
-    throw new Error("Failed to unsave listing");
   }
 );
 
@@ -149,16 +135,38 @@ const userSlice = createSlice({
         }
       })
 
-      // Handle save listing
-      .addCase(saveListing.fulfilled, (state, action) => {
-        state.savedListings.push(action.payload);
-      })
-
-      // Handle unsave listing
-      .addCase(unsaveListing.fulfilled, (state, action) => {
-        state.savedListings = state.savedListings.filter(
-          (listing) => listing.id !== action.payload
+      // Handle optimistic updates for toggleSaveListing
+      .addCase(toggleSaveListing.pending, (state, action) => {
+        console.log("Optimistically updating state for toggleSaveListing");
+        const listing = action.meta.arg;
+        const isSaved = state.savedListings.some(
+          (savedListing) => savedListing.id === listing.id
         );
+        if (isSaved) {
+          state.savedListings = state.savedListings.filter(
+            (savedListing) => savedListing.id !== listing.id
+          );
+        } else {
+          state.savedListings.push(listing);
+        }
+      })
+      .addCase(toggleSaveListing.fulfilled, (state, action) => {
+        // No need to update state here as it was already updated optimistically
+        console.log("Successfully saved/unsaved listing:", action.payload);
+      })
+      .addCase(toggleSaveListing.rejected, (state, action) => {
+        console.error("Failed to save/unsave listing:", action.error);
+        const listing = action.meta.arg;
+        const isSaved = state.savedListings.some(
+          (savedListing) => savedListing.id === listing.id
+        );
+        if (!isSaved) {
+          state.savedListings.push(listing);
+        } else {
+          state.savedListings = state.savedListings.filter(
+            (savedListing) => savedListing.id !== listing.id
+          );
+        }
       });
   },
 });

@@ -7,7 +7,8 @@ import { RootState, AppDispatch } from "@/app/store";
 import { geocode } from "@/app/lib/geocode";
 import { MapContainer, TileLayer, Circle } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import { setCurrentListingIndex } from "@/app/store/searchResultSlices";
+import { setCurrentListingIndex } from "@/app/store/searchResultsSlice";
+import SaveListingButton from "@/app/components/SaveListingButton";
 
 export default function ListingPage() {
   const { listingId } = useParams();
@@ -102,6 +103,7 @@ export default function ListingPage() {
         <p>{listing.description}</p>
         <p>Posted on: {new Date(listing.createdAt).toLocaleDateString()}</p>
         <p>Last updated: {new Date(listing.updatedAt).toLocaleDateString()}</p>
+        <SaveListingButton listing={listing} />
         <button onClick={handlePrevious} disabled={currentListingIndex === 0}>
           Previous
         </button>

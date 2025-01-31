@@ -1,18 +1,13 @@
 "use client";
 
-import { useDispatch, useSelector } from "react-redux";
-import type { RootState, AppDispatch } from "@/app/store";
-import { unsaveListing } from "@/app/store/userSlice";
+import { useSelector } from "react-redux";
+import type { RootState } from "@/app/store";
+import SaveListingButton from "@/app/components/SaveListingButton";
 
 export default function SavedListings() {
-  const dispatch = useDispatch<AppDispatch>();
   const savedListings = useSelector(
     (state: RootState) => state.user.savedListings
   );
-
-  const handleUnsave = async (listingId: string) => {
-    await dispatch(unsaveListing(listingId));
-  };
 
   return (
     <div>
@@ -25,7 +20,7 @@ export default function SavedListings() {
                 <h3>{listing.title}</h3>
                 <img
                   src={
-                    listing.imageUrls.length > 0
+                    listing.imageUrls?.length > 0
                       ? listing.imageUrls[0]
                       : "/placeholder.jpg"
                   }
@@ -35,7 +30,7 @@ export default function SavedListings() {
                 />
                 <p>{listing.description}</p>
                 <p>${listing.price}</p>
-                <button onClick={() => handleUnsave(listing.id)}>Unsave</button>
+                <SaveListingButton listing={listing} />
               </li>
             ))}
           </ul>
