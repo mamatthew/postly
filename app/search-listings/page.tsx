@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState, AppDispatch } from "@/app/store";
@@ -9,30 +9,27 @@ import {
   setCurrentListingIndex,
   clearSearchResults,
 } from "@/app/store/searchResultsSlice";
-import { Category, Location } from "@prisma/client";
-import Link from "next/link";
-import SaveListingButton from "@/app/components/SaveListingButton";
+import SearchBar from "@/app/components/SearchBar";
+import ListingPreview from "@/app/components/ListingPreview";
+import type { Category, Location } from "@/prisma/client";
+import { Loader2 } from "lucide-react";
 
 export default function SearchPage() {
-  const [query, setQuery] = useState("");
-  const [category, setCategory] = useState<Category | "All">("All");
-  const [location, setLocation] = useState<Location | "All">("All");
-  const router = useRouter();
   const dispatch = useDispatch<AppDispatch>();
   const listings = useSelector(
     (state: RootState) => state.searchResults.listings
   );
+  const searchStatus = useSelector(
+    (state: RootState) => state.searchResults.status
+  );
+
   const searchParams = useSearchParams();
 
+  const queryParam = searchParams.get("query") || "";
+  const categoryParam = searchParams.get("category") || "All";
+  const locationParam = searchParams.get("location") || "All";
+
   useEffect(() => {
-    const queryParam = searchParams.get("query") || "";
-    const categoryParam = searchParams.get("category") || "All";
-    const locationParam = searchParams.get("location") || "All";
-
-    setQuery(queryParam);
-    setCategory(categoryParam as Category | "All");
-    setLocation(locationParam as Location | "All");
-
     const fromListingPage = searchParams.get("fromListingPage") === "true";
 
     if (!fromListingPage) {
@@ -45,114 +42,42 @@ export default function SearchPage() {
         })
       );
     }
-  }, [searchParams, dispatch]);
-
-  const handleSearch = async (e: React.FormEvent) => {
-    e.preventDefault();
-    dispatch(clearSearchResults());
-    router.push(
-      `/search-listings?query=${query}&category=${
-        category !== "All" ? category : ""
-      }&location=${location !== "All" ? location : ""}`
-    );
-  };
-
-  const handleCategoryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const newCategory = e.target.value as Category | "All";
-    setCategory(newCategory);
-    dispatch(clearSearchResults());
-    router.push(
-      `/search-listings?query=${query}&category=${
-        newCategory !== "All" ? newCategory : ""
-      }&location=${location !== "All" ? location : ""}`
-    );
-  };
-
-  const handleLocationChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const newLocation = e.target.value as Location | "All";
-    setLocation(newLocation);
-    dispatch(clearSearchResults());
-    router.push(
-      `/search-listings?query=${query}&category=${
-        category !== "All" ? category : ""
-      }&location=${newLocation !== "All" ? newLocation : ""}`
-    );
-  };
+  }, [searchParams, dispatch, queryParam, categoryParam, locationParam]);
 
   const handleDetails = (index: number) => {
     dispatch(setCurrentListingIndex(index));
   };
 
   return (
-    <div>
-      <form onSubmit={handleSearch}>
-        <div>
-          <label htmlFor="query">Search Query:</label>
-          <input
-            type="text"
-            id="query"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search for listings..."
-          />
-        </div>
-        <div>
-          <label htmlFor="category">Category:</label>
-          <select
-            id="category"
-            value={category}
-            onChange={handleCategoryChange}
-          >
-            <option value="All">All</option>
-            {Object.values(Category).map((cat) => (
-              <option key={cat} value={cat}>
-                {cat}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div>
-          <label htmlFor="location">Location:</label>
-          <select
-            id="location"
-            value={location}
-            onChange={handleLocationChange}
-          >
-            <option value="All">All</option>
-            {Object.values(Location).map((loc) => (
-              <option key={loc} value={loc}>
-                {loc}
-              </option>
-            ))}
-          </select>
-        </div>
-        <button type="submit">Search</button>
-      </form>
+    <div className="container mx-auto p-4">
+      <div className="mb-6">
+        <SearchBar
+          initialQuery={queryParam}
+          initialCategory={categoryParam as Category | "All"}
+          initialLocation={locationParam as Location | "All"}
+        />
+      </div>
       <div>
-        {listings.length > 0 ? (
-          <ul>
+        {searchStatus === "loading" ? (
+          <div className="flex justify-center items-center h-64">
+            <Loader2 className="w-12 h-12 text-orange-500 animate-spin" />
+          </div>
+        ) : listings.length > 0 ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {listings.map((listing, index) => (
-              <li key={listing.id}>
-                <img
-                  src={listing.imageUrl}
-                  alt={listing.title}
-                  width="100"
-                  height="100"
-                />
-                <h2>{listing.title}</h2>
-                <p>{listing.description}</p>
-                <p>${listing.price}</p>
-                <SaveListingButton listing={listing} />
-                <Link
-                  href={`/listings/${listing.id}?query=${query}&category=${category}&location=${location}&fromListingPage=true`}
-                >
-                  <button onClick={() => handleDetails(index)}>Details</button>
-                </Link>
-              </li>
+              <ListingPreview
+                key={listing.id}
+                listing={listing}
+                index={index}
+                searchParams={searchParams}
+                onDetailsClick={handleDetails}
+              />
             ))}
-          </ul>
+          </div>
         ) : (
-          <p>No listings found</p>
+          <div className="text-center py-8">
+            <p className="text-xl text-gray-600">No listings found</p>
+          </div>
         )}
       </div>
     </div>

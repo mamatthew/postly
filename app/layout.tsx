@@ -2,7 +2,8 @@
 
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar"; // Import the new Navbar component
+import Navbar from "@/app/components/Navbar";
+import Footer from "@/app/components/Footer";
 import { Provider } from "react-redux";
 import { store } from "./store";
 
@@ -27,11 +28,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Provider store={store}>
-          <Navbar />
-          <main>{children}</main>
-          <footer>
-            <p>© {new Date().getFullYear()} Postly</p>
-          </footer>
+          <div className="flex flex-col min-h-screen">
+            <Navbar />
+            <main className="flex-grow">{children}</main>
+            <Footer />
+          </div>
         </Provider>
       </body>
     </html>
