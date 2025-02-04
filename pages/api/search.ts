@@ -5,7 +5,9 @@ import {
   searchListingsByCategoryOrLocation,
 } from "@prisma/client/sql";
 
-const prisma = new PrismaClient();
+const prisma = new PrismaClient({
+  log: ["query", "error", "warn"],
+});
 
 export interface Listing {
   imageUrl: string;
@@ -28,32 +30,131 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (req.method === "GET") {
-    const { query, category, location } = req.query;
-    console.log("query", query, "category", category, "location", location);
+    const { query, category, location, cursor, direction, limit } = req.query;
 
     try {
       let results;
-      if (query && typeof query === "string") {
+      const queryValue = query === "null" ? null : query;
+      const directionValue =
+        direction && typeof direction === "string" ? direction : "next";
+      const limitValue =
+        limit && typeof limit === "string" ? parseInt(limit) : 10;
+
+      const categoryValue = category === "null" ? null : category;
+      const locationValue = location === "null" ? null : location;
+      const cursorValue = cursor === "null" ? null : cursor;
+
+      if (queryValue) {
+        // log each query parameter to the console
+        console.log(
+          "Query",
+          query,
+          "Category",
+          categoryValue,
+          "Location",
+          locationValue,
+          "Cursor",
+          cursorValue,
+          "Direction",
+          directionValue,
+          "Limit",
+          limitValue
+        );
+        const parsedCursorValue = cursorValue
+          ? parseFloat(cursorValue as string)
+          : null;
         results = await prisma.$queryRawTyped(
           searchListings(
             query,
-            category && category !== "All" ? category : null,
-            location && location !== "All" ? location : null
+            categoryValue && categoryValue !== "All" ? categoryValue : null,
+            locationValue && locationValue !== "All" ? locationValue : null,
+            parsedCursorValue,
+            directionValue,
+            limitValue // Fetch one extra listing
           )
         );
-      } else if (category || location) {
+      } else if (categoryValue || locationValue) {
+        console.log(
+          "Category",
+          categoryValue,
+          "Location",
+          locationValue,
+          "Cursor",
+          cursorValue,
+          "Direction",
+          directionValue,
+          "Limit",
+          limitValue
+        );
+        const parsedCursorValue = cursorValue
+          ? new Date(cursorValue as string)
+          : null;
         results = await prisma.$queryRawTyped(
           searchListingsByCategoryOrLocation(
-            category && category !== "All" ? category : null,
-            location && location !== "All" ? location : null
+            categoryValue && categoryValue !== "All" ? categoryValue : null,
+            locationValue && locationValue !== "All" ? locationValue : null,
+            parsedCursorValue,
+            directionValue,
+            limitValue // Fetch one extra listing
           )
         );
+        //     results = await prisma.$queryRaw`
+        //   WITH ranked_listings AS (
+        //     SELECT
+        //       id,
+        //       title,
+        //       description,
+        //       price,
+        //       "createdAt",
+        //       "updatedAt",
+        //       "userId",
+        //       "imageUrls",
+        //       category,
+        //       location,
+        //       "postalCode",
+        //       city,
+        //       ROW_NUMBER() OVER (ORDER BY "createdAt" DESC) AS row_num
+        //     FROM
+        //       "Listing"
+        //     WHERE
+        //       (${categoryValue}::text IS NULL OR "Listing".category = ${categoryValue}::"Category")
+        //       AND (${locationValue}::text IS NULL OR "Listing".location = ${locationValue}::"Location")
+        //   )
+        //   SELECT
+        //     id,
+        //     title,
+        //     description,
+        //     price,
+        //     "createdAt",
+        //     "updatedAt",
+        //     "userId",
+        //     "imageUrls",
+        //     category,
+        //     location,
+        //     "postalCode",
+        //     city
+        //   FROM
+        //     ranked_listings
+        //   WHERE
+        //     (${parsedCursorValue}::timestamp IS NULL OR (
+        //       (${directionValue} = 'next' AND "createdAt" < ${parsedCursorValue}::timestamp) OR
+        //       (${directionValue} = 'prev' AND "createdAt" > ${parsedCursorValue}::timestamp)
+        //     ))
+        //   ORDER BY
+        //     "createdAt" DESC,
+        //     id ASC
+        //   LIMIT ${limitValue + 1};
+        // `;
       } else {
         return res.status(400).json({ error: "Query parameter is required" });
       }
 
       // log the results to the console
       console.log("Results", results);
+
+      if (!results) {
+        throw new Error("No results returned from the database");
+      }
 
       const listings: Listing[] = results.map((listing) => ({
         ...listing,
@@ -65,7 +166,12 @@ export default async function handler(
 
       res.status(200).json(listings);
     } catch (error) {
-      res.status(500).json({ message: "Internal server error ", error });
+      console.error("Error fetching listings:", error);
+      res.status(500).json({
+        message: "Internal server error",
+        error: error.message,
+        stack: error.stack,
+      });
     }
   } else {
     res.setHeader("Allow", ["GET"]);

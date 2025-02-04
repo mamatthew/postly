@@ -15,19 +15,19 @@ import {
 import { SearchIcon } from "lucide-react";
 
 interface SearchProps {
-  initialQuery: string;
-  initialCategory: Category | "All";
-  initialLocation: Location | "All";
+  initialQuery: string | null;
+  initialCategory: Category | null;
+  initialLocation: Location | null;
 }
 
 export default function SearchBar({
-  initialQuery = "",
-  initialCategory = "All",
-  initialLocation = "All",
+  initialQuery = null,
+  initialCategory = null,
+  initialLocation = null,
 }: SearchProps) {
   const [query, setQuery] = useState(initialQuery);
-  const [category, setCategory] = useState<Category | "All">(initialCategory);
-  const [location, setLocation] = useState<Location | "All">(initialLocation);
+  const [category, setCategory] = useState<Category | null>(initialCategory);
+  const [location, setLocation] = useState<Location | null>(initialLocation);
   const router = useRouter();
 
   useEffect(() => {
@@ -38,13 +38,13 @@ export default function SearchBar({
 
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (query.trim()) {
-      router.push(
-        `/search-listings?query=${query}&category=${
-          category !== "All" ? category : ""
-        }&location=${location !== "All" ? location : ""}`
-      );
-    }
+    const queryParams = new URLSearchParams();
+    if (query) queryParams.append("query", query);
+    if (category && category !== "All")
+      queryParams.append("category", category);
+    if (location && location !== "All")
+      queryParams.append("location", location);
+    router.push(`/search-listings?${queryParams.toString()}`);
   };
 
   const formatCategory = (cat: string) => {
@@ -63,7 +63,7 @@ export default function SearchBar({
       <div className="flex-grow">
         <Input
           type="text"
-          value={query}
+          value={query || ""}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search for listings..."
           className="w-full"
@@ -71,7 +71,7 @@ export default function SearchBar({
       </div>
       <Select
         value={category}
-        onValueChange={(value) => setCategory(value as Category | "All")}
+        onValueChange={(value) => setCategory(value as Category | null)}
       >
         <SelectTrigger className="w-full md:w-[180px]">
           <SelectValue placeholder="Category" />
@@ -87,7 +87,7 @@ export default function SearchBar({
       </Select>
       <Select
         value={location}
-        onValueChange={(value) => setLocation(value as Location | "All")}
+        onValueChange={(value) => setLocation(value as Location | null)}
       >
         <SelectTrigger className="w-full md:w-[180px]">
           <SelectValue placeholder="Location" />
