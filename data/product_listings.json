@@ -1,0 +1,3782 @@
+[
+    {
+        "id": 1,
+        "title": "Gaming Laptop",
+        "description": "Ideal for gaming, work, or entertainment.",
+        "price": 669.17,
+        "email": "seller1@example.com",
+        "location": "BURNABY",
+        "category": "ELECTRONICS"
+    },
+    {
+        "id": 2,
+        "title": "Bluetooth Speaker",
+        "description": "Latest model with advanced features.",
+        "price": 278.24,
+        "email": "seller2@example.com",
+        "location": "RICHMOND",
+        "category": "ELECTRONICS"
+    },
+    {
+        "id": 3,
+        "title": "USB-C Hub",
+        "description": "Latest model with advanced features.",
+        "price": 302.7,
+        "email": "seller3@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "ELECTRONICS"
+    },
+    {
+        "id": 4,
+        "title": "Smartwatch",
+        "description": "Latest model with advanced features.",
+        "price": 160.58,
+        "email": "seller4@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "ELECTRONICS"
+    },
+    {
+        "id": 5,
+        "title": "External Hard Drive",
+        "description": "Top-rated and in perfect working condition.",
+        "price": 164.99,
+        "email": "seller5@example.com",
+        "location": "NORTH_SHORE",
+        "category": "ELECTRONICS"
+    },
+    {
+        "id": 6,
+        "title": "Mechanical Keyboard",
+        "description": "Latest model with advanced features.",
+        "price": 405.69,
+        "email": "seller6@example.com",
+        "location": "RICHMOND",
+        "category": "ELECTRONICS"
+    },
+    {
+        "id": 7,
+        "title": "Smart Home Camera",
+        "description": "Comes with all original accessories.",
+        "price": 502.51,
+        "email": "seller7@example.com",
+        "location": "BURNABY",
+        "category": "ELECTRONICS"
+    },
+    {
+        "id": 8,
+        "title": "Portable Power Bank",
+        "description": "Ideal for gaming, work, or entertainment.",
+        "price": 466.58,
+        "email": "seller8@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "ELECTRONICS"
+    },
+    {
+        "id": 9,
+        "title": "Gaming Console",
+        "description": "Tested and fully functional, barely used.",
+        "price": 984.46,
+        "email": "seller9@example.com",
+        "location": "NORTH_SHORE",
+        "category": "ELECTRONICS"
+    },
+    {
+        "id": 10,
+        "title": "Noise-Canceling Earbuds",
+        "description": "Ideal for gaming, work, or entertainment.",
+        "price": 777.93,
+        "email": "seller10@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "ELECTRONICS"
+    },
+    {
+        "id": 11,
+        "title": "VR Headset",
+        "description": "Latest model with advanced features.",
+        "price": 208.62,
+        "email": "seller11@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "ELECTRONICS"
+    },
+    {
+        "id": 12,
+        "title": "Wireless Charging Pad",
+        "description": "Top-rated and in perfect working condition.",
+        "price": 926.48,
+        "email": "seller12@example.com",
+        "location": "RICHMOND",
+        "category": "ELECTRONICS"
+    },
+    {
+        "id": 13,
+        "title": "Smartphone 5G",
+        "description": "Latest model with advanced features.",
+        "price": 416.75,
+        "email": "seller13@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "ELECTRONICS"
+    },
+    {
+        "id": 14,
+        "title": "4K Smart TV",
+        "description": "Ideal for gaming, work, or entertainment.",
+        "price": 201.82,
+        "email": "seller14@example.com",
+        "location": "NORTH_SHORE",
+        "category": "ELECTRONICS"
+    },
+    {
+        "id": 15,
+        "title": "Wireless Headphones",
+        "description": "Ideal for gaming, work, or entertainment.",
+        "price": 422.77,
+        "email": "seller15@example.com",
+        "location": "RICHMOND",
+        "category": "ELECTRONICS"
+    },
+    {
+        "id": 16,
+        "title": "Gaming Laptop",
+        "description": "Tested and fully functional, barely used.",
+        "price": 489.06,
+        "email": "seller16@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "ELECTRONICS"
+    },
+    {
+        "id": 17,
+        "title": "Bluetooth Speaker",
+        "description": "Ideal for gaming, work, or entertainment.",
+        "price": 407.48,
+        "email": "seller17@example.com",
+        "location": "NORTH_SHORE",
+        "category": "ELECTRONICS"
+    },
+    {
+        "id": 18,
+        "title": "USB-C Hub",
+        "description": "Top-rated and in perfect working condition.",
+        "price": 562.76,
+        "email": "seller18@example.com",
+        "location": "BURNABY",
+        "category": "ELECTRONICS"
+    },
+    {
+        "id": 19,
+        "title": "Smartwatch",
+        "description": "Comes with all original accessories.",
+        "price": 446.45,
+        "email": "seller19@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "ELECTRONICS"
+    },
+    {
+        "id": 20,
+        "title": "External Hard Drive",
+        "description": "Top-rated and in perfect working condition.",
+        "price": 366.57,
+        "email": "seller20@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "ELECTRONICS"
+    },
+    {
+        "id": 21,
+        "title": "Mechanical Keyboard",
+        "description": "Top-rated and in perfect working condition.",
+        "price": 12.46,
+        "email": "seller21@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "ELECTRONICS"
+    },
+    {
+        "id": 22,
+        "title": "Smart Home Camera",
+        "description": "Comes with all original accessories.",
+        "price": 628.37,
+        "email": "seller22@example.com",
+        "location": "NORTH_SHORE",
+        "category": "ELECTRONICS"
+    },
+    {
+        "id": 23,
+        "title": "Portable Power Bank",
+        "description": "Ideal for gaming, work, or entertainment.",
+        "price": 310.76,
+        "email": "seller23@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "ELECTRONICS"
+    },
+    {
+        "id": 24,
+        "title": "Gaming Console",
+        "description": "Tested and fully functional, barely used.",
+        "price": 832.13,
+        "email": "seller24@example.com",
+        "location": "BURNABY",
+        "category": "ELECTRONICS"
+    },
+    {
+        "id": 25,
+        "title": "Noise-Canceling Earbuds",
+        "description": "Latest model with advanced features.",
+        "price": 796.07,
+        "email": "seller25@example.com",
+        "location": "RICHMOND",
+        "category": "ELECTRONICS"
+    },
+    {
+        "id": 26,
+        "title": "VR Headset",
+        "description": "Top-rated and in perfect working condition.",
+        "price": 895.21,
+        "email": "seller26@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "ELECTRONICS"
+    },
+    {
+        "id": 27,
+        "title": "Wireless Charging Pad",
+        "description": "Tested and fully functional, barely used.",
+        "price": 668.97,
+        "email": "seller27@example.com",
+        "location": "NORTH_SHORE",
+        "category": "ELECTRONICS"
+    },
+    {
+        "id": 28,
+        "title": "Smartphone 5G",
+        "description": "Comes with all original accessories.",
+        "price": 237.17,
+        "email": "seller28@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "ELECTRONICS"
+    },
+    {
+        "id": 29,
+        "title": "4K Smart TV",
+        "description": "Tested and fully functional, barely used.",
+        "price": 859.13,
+        "email": "seller29@example.com",
+        "location": "RICHMOND",
+        "category": "ELECTRONICS"
+    },
+    {
+        "id": 30,
+        "title": "Wireless Headphones",
+        "description": "Ideal for gaming, work, or entertainment.",
+        "price": 584.18,
+        "email": "seller30@example.com",
+        "location": "BURNABY",
+        "category": "ELECTRONICS"
+    },
+    {
+        "id": 31,
+        "title": "Foldable Study Desk",
+        "description": "Stylish and modern, fits well in any space.",
+        "price": 818.45,
+        "email": "seller31@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "FURNITURE"
+    },
+    {
+        "id": 32,
+        "title": "Rustic Shoe Rack",
+        "description": "Beautifully crafted with premium materials.",
+        "price": 302.47,
+        "email": "seller32@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "FURNITURE"
+    },
+    {
+        "id": 33,
+        "title": "Adjustable Standing Desk",
+        "description": "Minimal wear and tear, well-maintained.",
+        "price": 377.22,
+        "email": "seller33@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "FURNITURE"
+    },
+    {
+        "id": 34,
+        "title": "Glass TV Stand",
+        "description": "Beautifully crafted with premium materials.",
+        "price": 32.48,
+        "email": "seller34@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "FURNITURE"
+    },
+    {
+        "id": 35,
+        "title": "Convertible Sofa Bed",
+        "description": "Designed for comfort and durability.",
+        "price": 391.03,
+        "email": "seller35@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "FURNITURE"
+    },
+    {
+        "id": 36,
+        "title": "Recliner Lounge Chair",
+        "description": "Minimal wear and tear, well-maintained.",
+        "price": 959.95,
+        "email": "seller36@example.com",
+        "location": "BURNABY",
+        "category": "FURNITURE"
+    },
+    {
+        "id": 37,
+        "title": "Bookshelf with Storage",
+        "description": "Great addition to any home or office.",
+        "price": 868.68,
+        "email": "seller37@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "FURNITURE"
+    },
+    {
+        "id": 38,
+        "title": "Modern Nightstand",
+        "description": "Beautifully crafted with premium materials.",
+        "price": 915.62,
+        "email": "seller38@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "FURNITURE"
+    },
+    {
+        "id": 39,
+        "title": "Patio Lounge Set",
+        "description": "Beautifully crafted with premium materials.",
+        "price": 673.66,
+        "email": "seller39@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "FURNITURE"
+    },
+    {
+        "id": 40,
+        "title": "Bamboo Shoe Bench",
+        "description": "Great addition to any home or office.",
+        "price": 561.71,
+        "email": "seller40@example.com",
+        "location": "NORTH_SHORE",
+        "category": "FURNITURE"
+    },
+    {
+        "id": 41,
+        "title": "Ergonomic Office Chair",
+        "description": "Great addition to any home or office.",
+        "price": 28.56,
+        "email": "seller41@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "FURNITURE"
+    },
+    {
+        "id": 42,
+        "title": "Floating Wall Shelves",
+        "description": "Stylish and modern, fits well in any space.",
+        "price": 329.82,
+        "email": "seller42@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "FURNITURE"
+    },
+    {
+        "id": 43,
+        "title": "Dining Table Set",
+        "description": "Minimal wear and tear, well-maintained.",
+        "price": 621.81,
+        "email": "seller43@example.com",
+        "location": "RICHMOND",
+        "category": "FURNITURE"
+    },
+    {
+        "id": 44,
+        "title": "Wooden Coffee Table",
+        "description": "Great addition to any home or office.",
+        "price": 973.27,
+        "email": "seller44@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "FURNITURE"
+    },
+    {
+        "id": 45,
+        "title": "Antique Dresser",
+        "description": "Designed for comfort and durability.",
+        "price": 653.98,
+        "email": "seller45@example.com",
+        "location": "BURNABY",
+        "category": "FURNITURE"
+    },
+    {
+        "id": 46,
+        "title": "Foldable Study Desk",
+        "description": "Designed for comfort and durability.",
+        "price": 170.53,
+        "email": "seller46@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "FURNITURE"
+    },
+    {
+        "id": 47,
+        "title": "Rustic Shoe Rack",
+        "description": "Stylish and modern, fits well in any space.",
+        "price": 364.06,
+        "email": "seller47@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "FURNITURE"
+    },
+    {
+        "id": 48,
+        "title": "Adjustable Standing Desk",
+        "description": "Minimal wear and tear, well-maintained.",
+        "price": 175.91,
+        "email": "seller48@example.com",
+        "location": "BURNABY",
+        "category": "FURNITURE"
+    },
+    {
+        "id": 49,
+        "title": "Glass TV Stand",
+        "description": "Designed for comfort and durability.",
+        "price": 676.0,
+        "email": "seller49@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "FURNITURE"
+    },
+    {
+        "id": 50,
+        "title": "Convertible Sofa Bed",
+        "description": "Beautifully crafted with premium materials.",
+        "price": 157.66,
+        "email": "seller50@example.com",
+        "location": "RICHMOND",
+        "category": "FURNITURE"
+    },
+    {
+        "id": 51,
+        "title": "Recliner Lounge Chair",
+        "description": "Minimal wear and tear, well-maintained.",
+        "price": 817.07,
+        "email": "seller51@example.com",
+        "location": "BURNABY",
+        "category": "FURNITURE"
+    },
+    {
+        "id": 52,
+        "title": "Bookshelf with Storage",
+        "description": "Beautifully crafted with premium materials.",
+        "price": 293.97,
+        "email": "seller52@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "FURNITURE"
+    },
+    {
+        "id": 53,
+        "title": "Modern Nightstand",
+        "description": "Designed for comfort and durability.",
+        "price": 449.2,
+        "email": "seller53@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "FURNITURE"
+    },
+    {
+        "id": 54,
+        "title": "Patio Lounge Set",
+        "description": "Great addition to any home or office.",
+        "price": 597.1,
+        "email": "seller54@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "FURNITURE"
+    },
+    {
+        "id": 55,
+        "title": "Bamboo Shoe Bench",
+        "description": "Great addition to any home or office.",
+        "price": 658.73,
+        "email": "seller55@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "FURNITURE"
+    },
+    {
+        "id": 56,
+        "title": "Ergonomic Office Chair",
+        "description": "Designed for comfort and durability.",
+        "price": 863.0,
+        "email": "seller56@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "FURNITURE"
+    },
+    {
+        "id": 57,
+        "title": "Floating Wall Shelves",
+        "description": "Minimal wear and tear, well-maintained.",
+        "price": 106.0,
+        "email": "seller57@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "FURNITURE"
+    },
+    {
+        "id": 58,
+        "title": "Dining Table Set",
+        "description": "Beautifully crafted with premium materials.",
+        "price": 144.78,
+        "email": "seller58@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "FURNITURE"
+    },
+    {
+        "id": 59,
+        "title": "Wooden Coffee Table",
+        "description": "Stylish and modern, fits well in any space.",
+        "price": 672.14,
+        "email": "seller59@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "FURNITURE"
+    },
+    {
+        "id": 60,
+        "title": "Antique Dresser",
+        "description": "Great addition to any home or office.",
+        "price": 842.86,
+        "email": "seller60@example.com",
+        "location": "NORTH_SHORE",
+        "category": "FURNITURE"
+    },
+    {
+        "id": 61,
+        "title": "Designer Sunglasses",
+        "description": "High-quality fabric, barely worn.",
+        "price": 436.39,
+        "email": "seller61@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "CLOTHING"
+    },
+    {
+        "id": 62,
+        "title": "Casual Sneakers",
+        "description": "Brand new with tags, never worn.",
+        "price": 940.22,
+        "email": "seller62@example.com",
+        "location": "RICHMOND",
+        "category": "CLOTHING"
+    },
+    {
+        "id": 63,
+        "title": "Baseball Cap",
+        "description": "Ideal for casual or formal settings.",
+        "price": 230.03,
+        "email": "seller63@example.com",
+        "location": "BURNABY",
+        "category": "CLOTHING"
+    },
+    {
+        "id": 64,
+        "title": "Yoga Leggings",
+        "description": "Brand new with tags, never worn.",
+        "price": 895.0,
+        "email": "seller64@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "CLOTHING"
+    },
+    {
+        "id": 65,
+        "title": "Running Shoes",
+        "description": "High-quality fabric, barely worn.",
+        "price": 700.01,
+        "email": "seller65@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "CLOTHING"
+    },
+    {
+        "id": 66,
+        "title": "Hiking Boots",
+        "description": "High-quality fabric, barely worn.",
+        "price": 673.4,
+        "email": "seller66@example.com",
+        "location": "RICHMOND",
+        "category": "CLOTHING"
+    },
+    {
+        "id": 67,
+        "title": "Rainproof Jacket",
+        "description": "High-quality fabric, barely worn.",
+        "price": 397.22,
+        "email": "seller67@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "CLOTHING"
+    },
+    {
+        "id": 68,
+        "title": "Summer Dress",
+        "description": "Stylish design with a great fit.",
+        "price": 440.86,
+        "email": "seller68@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "CLOTHING"
+    },
+    {
+        "id": 69,
+        "title": "Leather Jacket",
+        "description": "Ideal for casual or formal settings.",
+        "price": 230.02,
+        "email": "seller69@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "CLOTHING"
+    },
+    {
+        "id": 70,
+        "title": "Woolen Winter Coat",
+        "description": "High-quality fabric, barely worn.",
+        "price": 864.83,
+        "email": "seller70@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "CLOTHING"
+    },
+    {
+        "id": 71,
+        "title": "Slim Fit Jeans",
+        "description": "Ideal for casual or formal settings.",
+        "price": 480.62,
+        "email": "seller71@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "CLOTHING"
+    },
+    {
+        "id": 72,
+        "title": "Formal Suit Jacket",
+        "description": "Trendy and comfortable, perfect for all occasions.",
+        "price": 996.21,
+        "email": "seller72@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "CLOTHING"
+    },
+    {
+        "id": 73,
+        "title": "Denim Shorts",
+        "description": "Stylish design with a great fit.",
+        "price": 712.27,
+        "email": "seller73@example.com",
+        "location": "BURNABY",
+        "category": "CLOTHING"
+    },
+    {
+        "id": 74,
+        "title": "Graphic T-Shirt",
+        "description": "Trendy and comfortable, perfect for all occasions.",
+        "price": 469.21,
+        "email": "seller74@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "CLOTHING"
+    },
+    {
+        "id": 75,
+        "title": "Puffer Vest",
+        "description": "Ideal for casual or formal settings.",
+        "price": 38.93,
+        "email": "seller75@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "CLOTHING"
+    },
+    {
+        "id": 76,
+        "title": "Designer Sunglasses",
+        "description": "Brand new with tags, never worn.",
+        "price": 486.76,
+        "email": "seller76@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "CLOTHING"
+    },
+    {
+        "id": 77,
+        "title": "Casual Sneakers",
+        "description": "Trendy and comfortable, perfect for all occasions.",
+        "price": 61.2,
+        "email": "seller77@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "CLOTHING"
+    },
+    {
+        "id": 78,
+        "title": "Baseball Cap",
+        "description": "Ideal for casual or formal settings.",
+        "price": 191.19,
+        "email": "seller78@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "CLOTHING"
+    },
+    {
+        "id": 79,
+        "title": "Yoga Leggings",
+        "description": "Stylish design with a great fit.",
+        "price": 509.65,
+        "email": "seller79@example.com",
+        "location": "BURNABY",
+        "category": "CLOTHING"
+    },
+    {
+        "id": 80,
+        "title": "Running Shoes",
+        "description": "High-quality fabric, barely worn.",
+        "price": 674.19,
+        "email": "seller80@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "CLOTHING"
+    },
+    {
+        "id": 81,
+        "title": "Hiking Boots",
+        "description": "High-quality fabric, barely worn.",
+        "price": 178.63,
+        "email": "seller81@example.com",
+        "location": "BURNABY",
+        "category": "CLOTHING"
+    },
+    {
+        "id": 82,
+        "title": "Rainproof Jacket",
+        "description": "Brand new with tags, never worn.",
+        "price": 976.37,
+        "email": "seller82@example.com",
+        "location": "BURNABY",
+        "category": "CLOTHING"
+    },
+    {
+        "id": 83,
+        "title": "Summer Dress",
+        "description": "Ideal for casual or formal settings.",
+        "price": 445.29,
+        "email": "seller83@example.com",
+        "location": "NORTH_SHORE",
+        "category": "CLOTHING"
+    },
+    {
+        "id": 84,
+        "title": "Leather Jacket",
+        "description": "Stylish design with a great fit.",
+        "price": 483.02,
+        "email": "seller84@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "CLOTHING"
+    },
+    {
+        "id": 85,
+        "title": "Woolen Winter Coat",
+        "description": "High-quality fabric, barely worn.",
+        "price": 955.43,
+        "email": "seller85@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "CLOTHING"
+    },
+    {
+        "id": 86,
+        "title": "Slim Fit Jeans",
+        "description": "Brand new with tags, never worn.",
+        "price": 36.1,
+        "email": "seller86@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "CLOTHING"
+    },
+    {
+        "id": 87,
+        "title": "Formal Suit Jacket",
+        "description": "Ideal for casual or formal settings.",
+        "price": 285.39,
+        "email": "seller87@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "CLOTHING"
+    },
+    {
+        "id": 88,
+        "title": "Denim Shorts",
+        "description": "Ideal for casual or formal settings.",
+        "price": 568.29,
+        "email": "seller88@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "CLOTHING"
+    },
+    {
+        "id": 89,
+        "title": "Graphic T-Shirt",
+        "description": "Brand new with tags, never worn.",
+        "price": 682.28,
+        "email": "seller89@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "CLOTHING"
+    },
+    {
+        "id": 90,
+        "title": "Puffer Vest",
+        "description": "Brand new with tags, never worn.",
+        "price": 43.76,
+        "email": "seller90@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "CLOTHING"
+    },
+    {
+        "id": 91,
+        "title": "Angle Grinder",
+        "description": "Heavy-duty and reliable for all projects.",
+        "price": 362.22,
+        "email": "seller91@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "TOOLS"
+    },
+    {
+        "id": 92,
+        "title": "Tape Measure",
+        "description": "High-performance tool with great durability.",
+        "price": 362.78,
+        "email": "seller92@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "TOOLS"
+    },
+    {
+        "id": 93,
+        "title": "Stud Finder",
+        "description": "Heavy-duty and reliable for all projects.",
+        "price": 877.7,
+        "email": "seller93@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "TOOLS"
+    },
+    {
+        "id": 94,
+        "title": "Hacksaw with Extra Blades",
+        "description": "Heavy-duty and reliable for all projects.",
+        "price": 675.54,
+        "email": "seller94@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "TOOLS"
+    },
+    {
+        "id": 95,
+        "title": "Heavy-Duty Toolbox",
+        "description": "High-performance tool with great durability.",
+        "price": 541.8,
+        "email": "seller95@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "TOOLS"
+    },
+    {
+        "id": 96,
+        "title": "Electric Screwdriver",
+        "description": "Comes with extra accessories for convenience.",
+        "price": 234.34,
+        "email": "seller96@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "TOOLS"
+    },
+    {
+        "id": 97,
+        "title": "Wood Chisel Set",
+        "description": "Heavy-duty and reliable for all projects.",
+        "price": 885.53,
+        "email": "seller97@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "TOOLS"
+    },
+    {
+        "id": 98,
+        "title": "Wire Stripper",
+        "description": "Gently used and in excellent condition.",
+        "price": 958.6,
+        "email": "seller98@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "TOOLS"
+    },
+    {
+        "id": 99,
+        "title": "Portable Air Compressor",
+        "description": "Comes with extra accessories for convenience.",
+        "price": 798.18,
+        "email": "seller99@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "TOOLS"
+    },
+    {
+        "id": 100,
+        "title": "Socket Wrench Set",
+        "description": "Gently used and in excellent condition.",
+        "price": 983.46,
+        "email": "seller100@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "TOOLS"
+    },
+    {
+        "id": 101,
+        "title": "Adjustable Spanner",
+        "description": "Heavy-duty and reliable for all projects.",
+        "price": 780.47,
+        "email": "seller101@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "TOOLS"
+    },
+    {
+        "id": 102,
+        "title": "Cordless Drill",
+        "description": "Heavy-duty and reliable for all projects.",
+        "price": 994.77,
+        "email": "seller102@example.com",
+        "location": "RICHMOND",
+        "category": "TOOLS"
+    },
+    {
+        "id": 103,
+        "title": "Workbench with Drawers",
+        "description": "Perfect for DIY enthusiasts or professionals.",
+        "price": 549.97,
+        "email": "seller103@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "TOOLS"
+    },
+    {
+        "id": 104,
+        "title": "Laser Level",
+        "description": "Gently used and in excellent condition.",
+        "price": 788.08,
+        "email": "seller104@example.com",
+        "location": "RICHMOND",
+        "category": "TOOLS"
+    },
+    {
+        "id": 105,
+        "title": "Precision Screwdriver Kit",
+        "description": "Gently used and in excellent condition.",
+        "price": 276.58,
+        "email": "seller105@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "TOOLS"
+    },
+    {
+        "id": 106,
+        "title": "Angle Grinder",
+        "description": "High-performance tool with great durability.",
+        "price": 190.25,
+        "email": "seller106@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "TOOLS"
+    },
+    {
+        "id": 107,
+        "title": "Tape Measure",
+        "description": "Gently used and in excellent condition.",
+        "price": 704.11,
+        "email": "seller107@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "TOOLS"
+    },
+    {
+        "id": 108,
+        "title": "Stud Finder",
+        "description": "Heavy-duty and reliable for all projects.",
+        "price": 583.45,
+        "email": "seller108@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "TOOLS"
+    },
+    {
+        "id": 109,
+        "title": "Hacksaw with Extra Blades",
+        "description": "Heavy-duty and reliable for all projects.",
+        "price": 848.4,
+        "email": "seller109@example.com",
+        "location": "NORTH_SHORE",
+        "category": "TOOLS"
+    },
+    {
+        "id": 110,
+        "title": "Heavy-Duty Toolbox",
+        "description": "High-performance tool with great durability.",
+        "price": 566.72,
+        "email": "seller110@example.com",
+        "location": "BURNABY",
+        "category": "TOOLS"
+    },
+    {
+        "id": 111,
+        "title": "Electric Screwdriver",
+        "description": "Heavy-duty and reliable for all projects.",
+        "price": 527.02,
+        "email": "seller111@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "TOOLS"
+    },
+    {
+        "id": 112,
+        "title": "Wood Chisel Set",
+        "description": "Perfect for DIY enthusiasts or professionals.",
+        "price": 901.94,
+        "email": "seller112@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "TOOLS"
+    },
+    {
+        "id": 113,
+        "title": "Wire Stripper",
+        "description": "Gently used and in excellent condition.",
+        "price": 634.14,
+        "email": "seller113@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "TOOLS"
+    },
+    {
+        "id": 114,
+        "title": "Portable Air Compressor",
+        "description": "Heavy-duty and reliable for all projects.",
+        "price": 211.38,
+        "email": "seller114@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "TOOLS"
+    },
+    {
+        "id": 115,
+        "title": "Socket Wrench Set",
+        "description": "Perfect for DIY enthusiasts or professionals.",
+        "price": 940.89,
+        "email": "seller115@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "TOOLS"
+    },
+    {
+        "id": 116,
+        "title": "Adjustable Spanner",
+        "description": "Heavy-duty and reliable for all projects.",
+        "price": 604.16,
+        "email": "seller116@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "TOOLS"
+    },
+    {
+        "id": 117,
+        "title": "Cordless Drill",
+        "description": "Gently used and in excellent condition.",
+        "price": 592.61,
+        "email": "seller117@example.com",
+        "location": "NORTH_SHORE",
+        "category": "TOOLS"
+    },
+    {
+        "id": 118,
+        "title": "Workbench with Drawers",
+        "description": "Gently used and in excellent condition.",
+        "price": 296.2,
+        "email": "seller118@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "TOOLS"
+    },
+    {
+        "id": 119,
+        "title": "Laser Level",
+        "description": "Gently used and in excellent condition.",
+        "price": 413.41,
+        "email": "seller119@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "TOOLS"
+    },
+    {
+        "id": 120,
+        "title": "Precision Screwdriver Kit",
+        "description": "Comes with extra accessories for convenience.",
+        "price": 352.22,
+        "email": "seller120@example.com",
+        "location": "RICHMOND",
+        "category": "TOOLS"
+    },
+    {
+        "id": 121,
+        "title": "History of Ancient Civilizations",
+        "description": "Engaging and informative, highly recommended.",
+        "price": 289.29,
+        "email": "seller121@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "BOOKS"
+    },
+    {
+        "id": 122,
+        "title": "Introduction to Philosophy",
+        "description": "In excellent condition with no marks.",
+        "price": 333.09,
+        "email": "seller122@example.com",
+        "location": "BURNABY",
+        "category": "BOOKS"
+    },
+    {
+        "id": 123,
+        "title": "Biographical Memoir",
+        "description": "A must-read for enthusiasts.",
+        "price": 891.01,
+        "email": "seller123@example.com",
+        "location": "BURNABY",
+        "category": "BOOKS"
+    },
+    {
+        "id": 124,
+        "title": "Self-Improvement Bestseller",
+        "description": "A must-read for enthusiasts.",
+        "price": 529.44,
+        "email": "seller124@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "BOOKS"
+    },
+    {
+        "id": 125,
+        "title": "Classic Science Fiction Novel",
+        "description": "Hardcover edition, well-preserved.",
+        "price": 116.67,
+        "email": "seller125@example.com",
+        "location": "RICHMOND",
+        "category": "BOOKS"
+    },
+    {
+        "id": 126,
+        "title": "Modern Architecture Trends",
+        "description": "Great for beginners and experts alike.",
+        "price": 21.32,
+        "email": "seller126@example.com",
+        "location": "RICHMOND",
+        "category": "BOOKS"
+    },
+    {
+        "id": 127,
+        "title": "Python Programming Guide",
+        "description": "In excellent condition with no marks.",
+        "price": 301.49,
+        "email": "seller127@example.com",
+        "location": "RICHMOND",
+        "category": "BOOKS"
+    },
+    {
+        "id": 128,
+        "title": "Fantasy Epic Series",
+        "description": "Engaging and informative, highly recommended.",
+        "price": 438.76,
+        "email": "seller128@example.com",
+        "location": "RICHMOND",
+        "category": "BOOKS"
+    },
+    {
+        "id": 129,
+        "title": "Cookbook for Quick Recipes",
+        "description": "Great for beginners and experts alike.",
+        "price": 257.49,
+        "email": "seller129@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "BOOKS"
+    },
+    {
+        "id": 130,
+        "title": "Photography Techniques Guide",
+        "description": "In excellent condition with no marks.",
+        "price": 664.29,
+        "email": "seller130@example.com",
+        "location": "BURNABY",
+        "category": "BOOKS"
+    },
+    {
+        "id": 131,
+        "title": "Artificial Intelligence Explained",
+        "description": "Great for beginners and experts alike.",
+        "price": 235.63,
+        "email": "seller131@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "BOOKS"
+    },
+    {
+        "id": 132,
+        "title": "Graphic Novel Collection",
+        "description": "A must-read for enthusiasts.",
+        "price": 947.62,
+        "email": "seller132@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "BOOKS"
+    },
+    {
+        "id": 133,
+        "title": "Poetry Anthology",
+        "description": "A must-read for enthusiasts.",
+        "price": 97.25,
+        "email": "seller133@example.com",
+        "location": "BURNABY",
+        "category": "BOOKS"
+    },
+    {
+        "id": 134,
+        "title": "Mystery Thriller Bestseller",
+        "description": "Great for beginners and experts alike.",
+        "price": 537.17,
+        "email": "seller134@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "BOOKS"
+    },
+    {
+        "id": 135,
+        "title": "Beginner's Guide to Investing",
+        "description": "Great for beginners and experts alike.",
+        "price": 654.45,
+        "email": "seller135@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "BOOKS"
+    },
+    {
+        "id": 136,
+        "title": "History of Ancient Civilizations",
+        "description": "Great for beginners and experts alike.",
+        "price": 120.55,
+        "email": "seller136@example.com",
+        "location": "RICHMOND",
+        "category": "BOOKS"
+    },
+    {
+        "id": 137,
+        "title": "Introduction to Philosophy",
+        "description": "Engaging and informative, highly recommended.",
+        "price": 898.94,
+        "email": "seller137@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "BOOKS"
+    },
+    {
+        "id": 138,
+        "title": "Biographical Memoir",
+        "description": "Hardcover edition, well-preserved.",
+        "price": 276.22,
+        "email": "seller138@example.com",
+        "location": "RICHMOND",
+        "category": "BOOKS"
+    },
+    {
+        "id": 139,
+        "title": "Self-Improvement Bestseller",
+        "description": "In excellent condition with no marks.",
+        "price": 344.89,
+        "email": "seller139@example.com",
+        "location": "BURNABY",
+        "category": "BOOKS"
+    },
+    {
+        "id": 140,
+        "title": "Classic Science Fiction Novel",
+        "description": "Hardcover edition, well-preserved.",
+        "price": 860.83,
+        "email": "seller140@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "BOOKS"
+    },
+    {
+        "id": 141,
+        "title": "Modern Architecture Trends",
+        "description": "Hardcover edition, well-preserved.",
+        "price": 53.22,
+        "email": "seller141@example.com",
+        "location": "BURNABY",
+        "category": "BOOKS"
+    },
+    {
+        "id": 142,
+        "title": "Python Programming Guide",
+        "description": "In excellent condition with no marks.",
+        "price": 215.37,
+        "email": "seller142@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "BOOKS"
+    },
+    {
+        "id": 143,
+        "title": "Fantasy Epic Series",
+        "description": "Great for beginners and experts alike.",
+        "price": 567.51,
+        "email": "seller143@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "BOOKS"
+    },
+    {
+        "id": 144,
+        "title": "Cookbook for Quick Recipes",
+        "description": "Hardcover edition, well-preserved.",
+        "price": 482.57,
+        "email": "seller144@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "BOOKS"
+    },
+    {
+        "id": 145,
+        "title": "Photography Techniques Guide",
+        "description": "Engaging and informative, highly recommended.",
+        "price": 55.53,
+        "email": "seller145@example.com",
+        "location": "RICHMOND",
+        "category": "BOOKS"
+    },
+    {
+        "id": 146,
+        "title": "Artificial Intelligence Explained",
+        "description": "A must-read for enthusiasts.",
+        "price": 202.84,
+        "email": "seller146@example.com",
+        "location": "BURNABY",
+        "category": "BOOKS"
+    },
+    {
+        "id": 147,
+        "title": "Graphic Novel Collection",
+        "description": "In excellent condition with no marks.",
+        "price": 577.49,
+        "email": "seller147@example.com",
+        "location": "BURNABY",
+        "category": "BOOKS"
+    },
+    {
+        "id": 148,
+        "title": "Poetry Anthology",
+        "description": "Engaging and informative, highly recommended.",
+        "price": 181.62,
+        "email": "seller148@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "BOOKS"
+    },
+    {
+        "id": 149,
+        "title": "Mystery Thriller Bestseller",
+        "description": "A must-read for enthusiasts.",
+        "price": 914.99,
+        "email": "seller149@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "BOOKS"
+    },
+    {
+        "id": 150,
+        "title": "Beginner's Guide to Investing",
+        "description": "Engaging and informative, highly recommended.",
+        "price": 681.54,
+        "email": "seller150@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "BOOKS"
+    },
+    {
+        "id": 151,
+        "title": "Aquarium Starter Kit",
+        "description": "Perfect for training and everyday use.",
+        "price": 379.92,
+        "email": "seller151@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "PETS"
+    },
+    {
+        "id": 152,
+        "title": "Dog Training Collar",
+        "description": "Made with pet-safe materials.",
+        "price": 727.79,
+        "email": "seller152@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "PETS"
+    },
+    {
+        "id": 153,
+        "title": "Adjustable Dog Harness",
+        "description": "Comfortable and durable for pets of all sizes.",
+        "price": 333.76,
+        "email": "seller153@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "PETS"
+    },
+    {
+        "id": 154,
+        "title": "Fish Tank Decoration Set",
+        "description": "Made with pet-safe materials.",
+        "price": 782.26,
+        "email": "seller154@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "PETS"
+    },
+    {
+        "id": 155,
+        "title": "Hamster Play Tunnel",
+        "description": "Perfect for training and everyday use.",
+        "price": 357.82,
+        "email": "seller155@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "PETS"
+    },
+    {
+        "id": 156,
+        "title": "Pet Travel Carrier",
+        "description": "Perfect for training and everyday use.",
+        "price": 119.97,
+        "email": "seller156@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "PETS"
+    },
+    {
+        "id": 157,
+        "title": "Interactive Cat Toy",
+        "description": "Designed for convenience and easy maintenance.",
+        "price": 934.25,
+        "email": "seller157@example.com",
+        "location": "BURNABY",
+        "category": "PETS"
+    },
+    {
+        "id": 158,
+        "title": "Reptile Heating Lamp",
+        "description": "Perfect for training and everyday use.",
+        "price": 288.07,
+        "email": "seller158@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "PETS"
+    },
+    {
+        "id": 159,
+        "title": "Rabbit Hutch",
+        "description": "Helps keep your pet entertained and happy.",
+        "price": 938.26,
+        "email": "seller159@example.com",
+        "location": "RICHMOND",
+        "category": "PETS"
+    },
+    {
+        "id": 160,
+        "title": "Automatic Pet Feeder",
+        "description": "Perfect for training and everyday use.",
+        "price": 764.32,
+        "email": "seller160@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "PETS"
+    },
+    {
+        "id": 161,
+        "title": "Large Bird Cage",
+        "description": "Comfortable and durable for pets of all sizes.",
+        "price": 299.08,
+        "email": "seller161@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "PETS"
+    },
+    {
+        "id": 162,
+        "title": "Pet Grooming Clippers",
+        "description": "Helps keep your pet entertained and happy.",
+        "price": 493.26,
+        "email": "seller162@example.com",
+        "location": "RICHMOND",
+        "category": "PETS"
+    },
+    {
+        "id": 163,
+        "title": "Pet Nail Trimmer",
+        "description": "Perfect for training and everyday use.",
+        "price": 933.26,
+        "email": "seller163@example.com",
+        "location": "NORTH_SHORE",
+        "category": "PETS"
+    },
+    {
+        "id": 164,
+        "title": "Cat Scratching Post",
+        "description": "Comfortable and durable for pets of all sizes.",
+        "price": 443.37,
+        "email": "seller164@example.com",
+        "location": "NORTH_SHORE",
+        "category": "PETS"
+    },
+    {
+        "id": 165,
+        "title": "Dog Bed",
+        "description": "Helps keep your pet entertained and happy.",
+        "price": 465.27,
+        "email": "seller165@example.com",
+        "location": "BURNABY",
+        "category": "PETS"
+    },
+    {
+        "id": 166,
+        "title": "Aquarium Starter Kit",
+        "description": "Helps keep your pet entertained and happy.",
+        "price": 576.01,
+        "email": "seller166@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "PETS"
+    },
+    {
+        "id": 167,
+        "title": "Dog Training Collar",
+        "description": "Made with pet-safe materials.",
+        "price": 890.59,
+        "email": "seller167@example.com",
+        "location": "NORTH_SHORE",
+        "category": "PETS"
+    },
+    {
+        "id": 168,
+        "title": "Adjustable Dog Harness",
+        "description": "Made with pet-safe materials.",
+        "price": 990.84,
+        "email": "seller168@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "PETS"
+    },
+    {
+        "id": 169,
+        "title": "Fish Tank Decoration Set",
+        "description": "Made with pet-safe materials.",
+        "price": 668.67,
+        "email": "seller169@example.com",
+        "location": "BURNABY",
+        "category": "PETS"
+    },
+    {
+        "id": 170,
+        "title": "Hamster Play Tunnel",
+        "description": "Helps keep your pet entertained and happy.",
+        "price": 454.52,
+        "email": "seller170@example.com",
+        "location": "NORTH_SHORE",
+        "category": "PETS"
+    },
+    {
+        "id": 171,
+        "title": "Pet Travel Carrier",
+        "description": "Comfortable and durable for pets of all sizes.",
+        "price": 120.97,
+        "email": "seller171@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "PETS"
+    },
+    {
+        "id": 172,
+        "title": "Interactive Cat Toy",
+        "description": "Helps keep your pet entertained and happy.",
+        "price": 838.65,
+        "email": "seller172@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "PETS"
+    },
+    {
+        "id": 173,
+        "title": "Reptile Heating Lamp",
+        "description": "Designed for convenience and easy maintenance.",
+        "price": 482.03,
+        "email": "seller173@example.com",
+        "location": "RICHMOND",
+        "category": "PETS"
+    },
+    {
+        "id": 174,
+        "title": "Rabbit Hutch",
+        "description": "Made with pet-safe materials.",
+        "price": 742.68,
+        "email": "seller174@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "PETS"
+    },
+    {
+        "id": 175,
+        "title": "Automatic Pet Feeder",
+        "description": "Made with pet-safe materials.",
+        "price": 900.6,
+        "email": "seller175@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "PETS"
+    },
+    {
+        "id": 176,
+        "title": "Large Bird Cage",
+        "description": "Designed for convenience and easy maintenance.",
+        "price": 807.2,
+        "email": "seller176@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "PETS"
+    },
+    {
+        "id": 177,
+        "title": "Pet Grooming Clippers",
+        "description": "Designed for convenience and easy maintenance.",
+        "price": 78.74,
+        "email": "seller177@example.com",
+        "location": "NORTH_SHORE",
+        "category": "PETS"
+    },
+    {
+        "id": 178,
+        "title": "Pet Nail Trimmer",
+        "description": "Comfortable and durable for pets of all sizes.",
+        "price": 465.38,
+        "email": "seller178@example.com",
+        "location": "RICHMOND",
+        "category": "PETS"
+    },
+    {
+        "id": 179,
+        "title": "Cat Scratching Post",
+        "description": "Helps keep your pet entertained and happy.",
+        "price": 485.05,
+        "email": "seller179@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "PETS"
+    },
+    {
+        "id": 180,
+        "title": "Dog Bed",
+        "description": "Made with pet-safe materials.",
+        "price": 821.01,
+        "email": "seller180@example.com",
+        "location": "NORTH_SHORE",
+        "category": "PETS"
+    },
+    {
+        "id": 181,
+        "title": "LEGO Star Wars Set",
+        "description": "Enhances creativity and imagination.",
+        "price": 997.07,
+        "email": "seller181@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "TOYS"
+    },
+    {
+        "id": 182,
+        "title": "Build-Your-Own Robot Kit",
+        "description": "Fun and engaging for all ages.",
+        "price": 986.76,
+        "email": "seller182@example.com",
+        "location": "RICHMOND",
+        "category": "TOYS"
+    },
+    {
+        "id": 183,
+        "title": "Educational Flashcards",
+        "description": "Fun and engaging for all ages.",
+        "price": 84.67,
+        "email": "seller183@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "TOYS"
+    },
+    {
+        "id": 184,
+        "title": "Board Game Collection",
+        "description": "Well-maintained and fully functional.",
+        "price": 502.16,
+        "email": "seller184@example.com",
+        "location": "NORTH_SHORE",
+        "category": "TOYS"
+    },
+    {
+        "id": 185,
+        "title": "Kids' Play Tent",
+        "description": "Well-maintained and fully functional.",
+        "price": 152.04,
+        "email": "seller185@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "TOYS"
+    },
+    {
+        "id": 186,
+        "title": "Remote Control Car",
+        "description": "Limited edition, hard to find.",
+        "price": 305.47,
+        "email": "seller186@example.com",
+        "location": "RICHMOND",
+        "category": "TOYS"
+    },
+    {
+        "id": 187,
+        "title": "Toy Race Track",
+        "description": "Limited edition, hard to find.",
+        "price": 241.32,
+        "email": "seller187@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "TOYS"
+    },
+    {
+        "id": 188,
+        "title": "Action Figure Bundle",
+        "description": "Enhances creativity and imagination.",
+        "price": 484.52,
+        "email": "seller188@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "TOYS"
+    },
+    {
+        "id": 189,
+        "title": "Science Experiment Kit",
+        "description": "Perfect gift for kids and collectors.",
+        "price": 613.53,
+        "email": "seller189@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "TOYS"
+    },
+    {
+        "id": 190,
+        "title": "Stuffed Animal Toy",
+        "description": "Limited edition, hard to find.",
+        "price": 504.36,
+        "email": "seller190@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "TOYS"
+    },
+    {
+        "id": 191,
+        "title": "Dollhouse",
+        "description": "Well-maintained and fully functional.",
+        "price": 800.44,
+        "email": "seller191@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "TOYS"
+    },
+    {
+        "id": 192,
+        "title": "Magic Trick Set",
+        "description": "Enhances creativity and imagination.",
+        "price": 199.7,
+        "email": "seller192@example.com",
+        "location": "RICHMOND",
+        "category": "TOYS"
+    },
+    {
+        "id": 193,
+        "title": "Inflatable Bounce House",
+        "description": "Fun and engaging for all ages.",
+        "price": 362.65,
+        "email": "seller193@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "TOYS"
+    },
+    {
+        "id": 194,
+        "title": "Puzzle Game Set",
+        "description": "Well-maintained and fully functional.",
+        "price": 972.88,
+        "email": "seller194@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "TOYS"
+    },
+    {
+        "id": 195,
+        "title": "Musical Instrument for Kids",
+        "description": "Enhances creativity and imagination.",
+        "price": 946.13,
+        "email": "seller195@example.com",
+        "location": "RICHMOND",
+        "category": "TOYS"
+    },
+    {
+        "id": 196,
+        "title": "LEGO Star Wars Set",
+        "description": "Perfect gift for kids and collectors.",
+        "price": 90.63,
+        "email": "seller196@example.com",
+        "location": "NORTH_SHORE",
+        "category": "TOYS"
+    },
+    {
+        "id": 197,
+        "title": "Build-Your-Own Robot Kit",
+        "description": "Limited edition, hard to find.",
+        "price": 756.21,
+        "email": "seller197@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "TOYS"
+    },
+    {
+        "id": 198,
+        "title": "Educational Flashcards",
+        "description": "Limited edition, hard to find.",
+        "price": 355.08,
+        "email": "seller198@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "TOYS"
+    },
+    {
+        "id": 199,
+        "title": "Board Game Collection",
+        "description": "Enhances creativity and imagination.",
+        "price": 298.45,
+        "email": "seller199@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "TOYS"
+    },
+    {
+        "id": 200,
+        "title": "Kids' Play Tent",
+        "description": "Fun and engaging for all ages.",
+        "price": 145.3,
+        "email": "seller200@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "TOYS"
+    },
+    {
+        "id": 201,
+        "title": "Remote Control Car",
+        "description": "Well-maintained and fully functional.",
+        "price": 981.6,
+        "email": "seller201@example.com",
+        "location": "NORTH_SHORE",
+        "category": "TOYS"
+    },
+    {
+        "id": 202,
+        "title": "Toy Race Track",
+        "description": "Well-maintained and fully functional.",
+        "price": 921.35,
+        "email": "seller202@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "TOYS"
+    },
+    {
+        "id": 203,
+        "title": "Action Figure Bundle",
+        "description": "Enhances creativity and imagination.",
+        "price": 163.11,
+        "email": "seller203@example.com",
+        "location": "NORTH_SHORE",
+        "category": "TOYS"
+    },
+    {
+        "id": 204,
+        "title": "Science Experiment Kit",
+        "description": "Limited edition, hard to find.",
+        "price": 382.9,
+        "email": "seller204@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "TOYS"
+    },
+    {
+        "id": 205,
+        "title": "Stuffed Animal Toy",
+        "description": "Well-maintained and fully functional.",
+        "price": 744.73,
+        "email": "seller205@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "TOYS"
+    },
+    {
+        "id": 206,
+        "title": "Dollhouse",
+        "description": "Enhances creativity and imagination.",
+        "price": 136.02,
+        "email": "seller206@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "TOYS"
+    },
+    {
+        "id": 207,
+        "title": "Magic Trick Set",
+        "description": "Perfect gift for kids and collectors.",
+        "price": 289.17,
+        "email": "seller207@example.com",
+        "location": "NORTH_SHORE",
+        "category": "TOYS"
+    },
+    {
+        "id": 208,
+        "title": "Inflatable Bounce House",
+        "description": "Fun and engaging for all ages.",
+        "price": 156.15,
+        "email": "seller208@example.com",
+        "location": "BURNABY",
+        "category": "TOYS"
+    },
+    {
+        "id": 209,
+        "title": "Puzzle Game Set",
+        "description": "Well-maintained and fully functional.",
+        "price": 576.1,
+        "email": "seller209@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "TOYS"
+    },
+    {
+        "id": 210,
+        "title": "Musical Instrument for Kids",
+        "description": "Enhances creativity and imagination.",
+        "price": 306.68,
+        "email": "seller210@example.com",
+        "location": "RICHMOND",
+        "category": "TOYS"
+    },
+    {
+        "id": 211,
+        "title": "Model Airplane Building Kit",
+        "description": "Great for beginners and hobbyists.",
+        "price": 967.08,
+        "email": "seller211@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "HOBBIES_LEISURE"
+    },
+    {
+        "id": 212,
+        "title": "Acoustic Guitar",
+        "description": "Well-crafted for serious enthusiasts.",
+        "price": 286.41,
+        "email": "seller212@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "HOBBIES_LEISURE"
+    },
+    {
+        "id": 213,
+        "title": "Professional Chess Set",
+        "description": "Lightweight and easy to carry.",
+        "price": 11.21,
+        "email": "seller213@example.com",
+        "location": "BURNABY",
+        "category": "HOBBIES_LEISURE"
+    },
+    {
+        "id": 214,
+        "title": "Camping Tent",
+        "description": "Lightweight and easy to carry.",
+        "price": 660.27,
+        "email": "seller214@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "HOBBIES_LEISURE"
+    },
+    {
+        "id": 215,
+        "title": "Sketching Set",
+        "description": "Includes all necessary components.",
+        "price": 914.21,
+        "email": "seller215@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "HOBBIES_LEISURE"
+    },
+    {
+        "id": 216,
+        "title": "Artisanal Calligraphy Set",
+        "description": "Well-crafted for serious enthusiasts.",
+        "price": 661.95,
+        "email": "seller216@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "HOBBIES_LEISURE"
+    },
+    {
+        "id": 217,
+        "title": "Origami Paper Pack",
+        "description": "Well-crafted for serious enthusiasts.",
+        "price": 829.36,
+        "email": "seller217@example.com",
+        "location": "NORTH_SHORE",
+        "category": "HOBBIES_LEISURE"
+    },
+    {
+        "id": 218,
+        "title": "Fishing Rod Set",
+        "description": "Well-crafted for serious enthusiasts.",
+        "price": 725.12,
+        "email": "seller218@example.com",
+        "location": "BURNABY",
+        "category": "HOBBIES_LEISURE"
+    },
+    {
+        "id": 219,
+        "title": "Wood Carving Kit",
+        "description": "Well-crafted for serious enthusiasts.",
+        "price": 225.47,
+        "email": "seller219@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "HOBBIES_LEISURE"
+    },
+    {
+        "id": 220,
+        "title": "Portable Hammock",
+        "description": "Lightweight and easy to carry.",
+        "price": 249.81,
+        "email": "seller220@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "HOBBIES_LEISURE"
+    },
+    {
+        "id": 221,
+        "title": "Rock Climbing Gear",
+        "description": "Enhances skills and creativity.",
+        "price": 383.23,
+        "email": "seller221@example.com",
+        "location": "RICHMOND",
+        "category": "HOBBIES_LEISURE"
+    },
+    {
+        "id": 222,
+        "title": "Binoculars for Bird Watching",
+        "description": "Includes all necessary components.",
+        "price": 652.13,
+        "email": "seller222@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "HOBBIES_LEISURE"
+    },
+    {
+        "id": 223,
+        "title": "Embroidery Starter Kit",
+        "description": "Well-crafted for serious enthusiasts.",
+        "price": 86.3,
+        "email": "seller223@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "HOBBIES_LEISURE"
+    },
+    {
+        "id": 224,
+        "title": "Ceramic Pottery Wheel",
+        "description": "Enhances skills and creativity.",
+        "price": 640.15,
+        "email": "seller224@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "HOBBIES_LEISURE"
+    },
+    {
+        "id": 225,
+        "title": "DIY Candle Making Kit",
+        "description": "Great for beginners and hobbyists.",
+        "price": 825.29,
+        "email": "seller225@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "HOBBIES_LEISURE"
+    },
+    {
+        "id": 226,
+        "title": "Model Airplane Building Kit",
+        "description": "Great for beginners and hobbyists.",
+        "price": 168.98,
+        "email": "seller226@example.com",
+        "location": "NORTH_SHORE",
+        "category": "HOBBIES_LEISURE"
+    },
+    {
+        "id": 227,
+        "title": "Acoustic Guitar",
+        "description": "Enhances skills and creativity.",
+        "price": 264.72,
+        "email": "seller227@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "HOBBIES_LEISURE"
+    },
+    {
+        "id": 228,
+        "title": "Professional Chess Set",
+        "description": "Lightweight and easy to carry.",
+        "price": 590.05,
+        "email": "seller228@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "HOBBIES_LEISURE"
+    },
+    {
+        "id": 229,
+        "title": "Camping Tent",
+        "description": "Includes all necessary components.",
+        "price": 767.92,
+        "email": "seller229@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "HOBBIES_LEISURE"
+    },
+    {
+        "id": 230,
+        "title": "Sketching Set",
+        "description": "Lightweight and easy to carry.",
+        "price": 964.53,
+        "email": "seller230@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "HOBBIES_LEISURE"
+    },
+    {
+        "id": 231,
+        "title": "Artisanal Calligraphy Set",
+        "description": "Great for beginners and hobbyists.",
+        "price": 440.83,
+        "email": "seller231@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "HOBBIES_LEISURE"
+    },
+    {
+        "id": 232,
+        "title": "Origami Paper Pack",
+        "description": "Enhances skills and creativity.",
+        "price": 693.34,
+        "email": "seller232@example.com",
+        "location": "BURNABY",
+        "category": "HOBBIES_LEISURE"
+    },
+    {
+        "id": 233,
+        "title": "Fishing Rod Set",
+        "description": "Enhances skills and creativity.",
+        "price": 475.93,
+        "email": "seller233@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "HOBBIES_LEISURE"
+    },
+    {
+        "id": 234,
+        "title": "Wood Carving Kit",
+        "description": "Well-crafted for serious enthusiasts.",
+        "price": 523.58,
+        "email": "seller234@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "HOBBIES_LEISURE"
+    },
+    {
+        "id": 235,
+        "title": "Portable Hammock",
+        "description": "Lightweight and easy to carry.",
+        "price": 621.6,
+        "email": "seller235@example.com",
+        "location": "NORTH_SHORE",
+        "category": "HOBBIES_LEISURE"
+    },
+    {
+        "id": 236,
+        "title": "Rock Climbing Gear",
+        "description": "Lightweight and easy to carry.",
+        "price": 808.41,
+        "email": "seller236@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "HOBBIES_LEISURE"
+    },
+    {
+        "id": 237,
+        "title": "Binoculars for Bird Watching",
+        "description": "Enhances skills and creativity.",
+        "price": 464.5,
+        "email": "seller237@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "HOBBIES_LEISURE"
+    },
+    {
+        "id": 238,
+        "title": "Embroidery Starter Kit",
+        "description": "Well-crafted for serious enthusiasts.",
+        "price": 98.98,
+        "email": "seller238@example.com",
+        "location": "BURNABY",
+        "category": "HOBBIES_LEISURE"
+    },
+    {
+        "id": 239,
+        "title": "Ceramic Pottery Wheel",
+        "description": "Enhances skills and creativity.",
+        "price": 60.88,
+        "email": "seller239@example.com",
+        "location": "NORTH_SHORE",
+        "category": "HOBBIES_LEISURE"
+    },
+    {
+        "id": 240,
+        "title": "DIY Candle Making Kit",
+        "description": "Well-crafted for serious enthusiasts.",
+        "price": 269.47,
+        "email": "seller240@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "HOBBIES_LEISURE"
+    },
+    {
+        "id": 241,
+        "title": "Silver Hoop Earrings",
+        "description": "Made with high-quality materials.",
+        "price": 261.06,
+        "email": "seller241@example.com",
+        "location": "NORTH_SHORE",
+        "category": "FASHION_BEAUTY"
+    },
+    {
+        "id": 242,
+        "title": "Makeup Brush Set",
+        "description": "Made with high-quality materials.",
+        "price": 393.67,
+        "email": "seller242@example.com",
+        "location": "NORTH_SHORE",
+        "category": "FASHION_BEAUTY"
+    },
+    {
+        "id": 243,
+        "title": "Gold-Plated Necklace",
+        "description": "Elegant and stylish for any occasion.",
+        "price": 872.93,
+        "email": "seller243@example.com",
+        "location": "BURNABY",
+        "category": "FASHION_BEAUTY"
+    },
+    {
+        "id": 244,
+        "title": "Luxury Skincare Bundle",
+        "description": "Made with high-quality materials.",
+        "price": 711.37,
+        "email": "seller244@example.com",
+        "location": "RICHMOND",
+        "category": "FASHION_BEAUTY"
+    },
+    {
+        "id": 245,
+        "title": "Hydrating Lip Balm Set",
+        "description": "Luxurious feel with a modern design.",
+        "price": 96.01,
+        "email": "seller245@example.com",
+        "location": "RICHMOND",
+        "category": "FASHION_BEAUTY"
+    },
+    {
+        "id": 246,
+        "title": "Elegant Silk Scarf",
+        "description": "Luxurious feel with a modern design.",
+        "price": 207.95,
+        "email": "seller246@example.com",
+        "location": "NORTH_SHORE",
+        "category": "FASHION_BEAUTY"
+    },
+    {
+        "id": 247,
+        "title": "Anti-Aging Serum",
+        "description": "Made with high-quality materials.",
+        "price": 242.57,
+        "email": "seller247@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "FASHION_BEAUTY"
+    },
+    {
+        "id": 248,
+        "title": "Fragrance Gift Set",
+        "description": "Luxurious feel with a modern design.",
+        "price": 839.38,
+        "email": "seller248@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "FASHION_BEAUTY"
+    },
+    {
+        "id": 249,
+        "title": "Designer Handbag",
+        "description": "Made with high-quality materials.",
+        "price": 610.16,
+        "email": "seller249@example.com",
+        "location": "RICHMOND",
+        "category": "FASHION_BEAUTY"
+    },
+    {
+        "id": 250,
+        "title": "Facial Cleansing Device",
+        "description": "Elegant and stylish for any occasion.",
+        "price": 497.62,
+        "email": "seller250@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "FASHION_BEAUTY"
+    },
+    {
+        "id": 251,
+        "title": "Casual Fedora Hat",
+        "description": "Trendy and in excellent condition.",
+        "price": 373.65,
+        "email": "seller251@example.com",
+        "location": "RICHMOND",
+        "category": "FASHION_BEAUTY"
+    },
+    {
+        "id": 252,
+        "title": "Hair Styling Tools",
+        "description": "Trendy and in excellent condition.",
+        "price": 686.15,
+        "email": "seller252@example.com",
+        "location": "BURNABY",
+        "category": "FASHION_BEAUTY"
+    },
+    {
+        "id": 253,
+        "title": "Men's Leather Wallet",
+        "description": "Elegant and stylish for any occasion.",
+        "price": 634.69,
+        "email": "seller253@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "FASHION_BEAUTY"
+    },
+    {
+        "id": 254,
+        "title": "Therapeutic Essential Oils",
+        "description": "Luxurious feel with a modern design.",
+        "price": 99.25,
+        "email": "seller254@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "FASHION_BEAUTY"
+    },
+    {
+        "id": 255,
+        "title": "Salon-Quality Nail Polish Set",
+        "description": "Luxurious feel with a modern design.",
+        "price": 417.17,
+        "email": "seller255@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "FASHION_BEAUTY"
+    },
+    {
+        "id": 256,
+        "title": "Silver Hoop Earrings",
+        "description": "Made with high-quality materials.",
+        "price": 954.04,
+        "email": "seller256@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "FASHION_BEAUTY"
+    },
+    {
+        "id": 257,
+        "title": "Makeup Brush Set",
+        "description": "Trendy and in excellent condition.",
+        "price": 686.51,
+        "email": "seller257@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "FASHION_BEAUTY"
+    },
+    {
+        "id": 258,
+        "title": "Gold-Plated Necklace",
+        "description": "Trendy and in excellent condition.",
+        "price": 79.9,
+        "email": "seller258@example.com",
+        "location": "BURNABY",
+        "category": "FASHION_BEAUTY"
+    },
+    {
+        "id": 259,
+        "title": "Luxury Skincare Bundle",
+        "description": "Trendy and in excellent condition.",
+        "price": 156.45,
+        "email": "seller259@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "FASHION_BEAUTY"
+    },
+    {
+        "id": 260,
+        "title": "Hydrating Lip Balm Set",
+        "description": "Made with high-quality materials.",
+        "price": 722.59,
+        "email": "seller260@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "FASHION_BEAUTY"
+    },
+    {
+        "id": 261,
+        "title": "Elegant Silk Scarf",
+        "description": "Luxurious feel with a modern design.",
+        "price": 521.73,
+        "email": "seller261@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "FASHION_BEAUTY"
+    },
+    {
+        "id": 262,
+        "title": "Anti-Aging Serum",
+        "description": "Luxurious feel with a modern design.",
+        "price": 34.79,
+        "email": "seller262@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "FASHION_BEAUTY"
+    },
+    {
+        "id": 263,
+        "title": "Fragrance Gift Set",
+        "description": "Luxurious feel with a modern design.",
+        "price": 519.45,
+        "email": "seller263@example.com",
+        "location": "BURNABY",
+        "category": "FASHION_BEAUTY"
+    },
+    {
+        "id": 264,
+        "title": "Designer Handbag",
+        "description": "Luxurious feel with a modern design.",
+        "price": 11.44,
+        "email": "seller264@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "FASHION_BEAUTY"
+    },
+    {
+        "id": 265,
+        "title": "Facial Cleansing Device",
+        "description": "Luxurious feel with a modern design.",
+        "price": 683.81,
+        "email": "seller265@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "FASHION_BEAUTY"
+    },
+    {
+        "id": 266,
+        "title": "Casual Fedora Hat",
+        "description": "Comes in original packaging.",
+        "price": 955.03,
+        "email": "seller266@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "FASHION_BEAUTY"
+    },
+    {
+        "id": 267,
+        "title": "Hair Styling Tools",
+        "description": "Trendy and in excellent condition.",
+        "price": 511.16,
+        "email": "seller267@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "FASHION_BEAUTY"
+    },
+    {
+        "id": 268,
+        "title": "Men's Leather Wallet",
+        "description": "Made with high-quality materials.",
+        "price": 764.23,
+        "email": "seller268@example.com",
+        "location": "NORTH_SHORE",
+        "category": "FASHION_BEAUTY"
+    },
+    {
+        "id": 269,
+        "title": "Therapeutic Essential Oils",
+        "description": "Trendy and in excellent condition.",
+        "price": 129.17,
+        "email": "seller269@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "FASHION_BEAUTY"
+    },
+    {
+        "id": 270,
+        "title": "Salon-Quality Nail Polish Set",
+        "description": "Comes in original packaging.",
+        "price": 239.72,
+        "email": "seller270@example.com",
+        "location": "NORTH_SHORE",
+        "category": "FASHION_BEAUTY"
+    },
+    {
+        "id": 271,
+        "title": "Basketball Hoop",
+        "description": "Ideal for athletes and fitness lovers.",
+        "price": 686.77,
+        "email": "seller271@example.com",
+        "location": "NORTH_SHORE",
+        "category": "SPORTS"
+    },
+    {
+        "id": 272,
+        "title": "Waterproof Fitness Tracker",
+        "description": "Designed for performance and comfort.",
+        "price": 138.65,
+        "email": "seller272@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "SPORTS"
+    },
+    {
+        "id": 273,
+        "title": "Portable Table Tennis Set",
+        "description": "Suitable for all skill levels.",
+        "price": 661.32,
+        "email": "seller273@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "SPORTS"
+    },
+    {
+        "id": 274,
+        "title": "Camping Stove Kit",
+        "description": "Designed for performance and comfort.",
+        "price": 245.31,
+        "email": "seller274@example.com",
+        "location": "RICHMOND",
+        "category": "SPORTS"
+    },
+    {
+        "id": 275,
+        "title": "Punching Bag",
+        "description": "Lightweight and durable.",
+        "price": 706.43,
+        "email": "seller275@example.com",
+        "location": "BURNABY",
+        "category": "SPORTS"
+    },
+    {
+        "id": 276,
+        "title": "Foldable Kayak",
+        "description": "Lightweight and durable.",
+        "price": 306.59,
+        "email": "seller276@example.com",
+        "location": "NORTH_SHORE",
+        "category": "SPORTS"
+    },
+    {
+        "id": 277,
+        "title": "Hiking Backpack",
+        "description": "Designed for performance and comfort.",
+        "price": 765.21,
+        "email": "seller277@example.com",
+        "location": "RICHMOND",
+        "category": "SPORTS"
+    },
+    {
+        "id": 278,
+        "title": "Tennis Racket Set",
+        "description": "Suitable for all skill levels.",
+        "price": 748.8,
+        "email": "seller278@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "SPORTS"
+    },
+    {
+        "id": 279,
+        "title": "Resistance Bands",
+        "description": "Lightweight and durable.",
+        "price": 485.26,
+        "email": "seller279@example.com",
+        "location": "NORTH_SHORE",
+        "category": "SPORTS"
+    },
+    {
+        "id": 280,
+        "title": "Treadmill",
+        "description": "Ideal for athletes and fitness lovers.",
+        "price": 784.19,
+        "email": "seller280@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "SPORTS"
+    },
+    {
+        "id": 281,
+        "title": "Yoga Mat",
+        "description": "High-quality and well-balanced.",
+        "price": 485.93,
+        "email": "seller281@example.com",
+        "location": "RICHMOND",
+        "category": "SPORTS"
+    },
+    {
+        "id": 282,
+        "title": "Soccer Ball and Cleats",
+        "description": "Lightweight and durable.",
+        "price": 47.52,
+        "email": "seller282@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "SPORTS"
+    },
+    {
+        "id": 283,
+        "title": "Adjustable Dumbbells",
+        "description": "Suitable for all skill levels.",
+        "price": 377.42,
+        "email": "seller283@example.com",
+        "location": "NORTH_SHORE",
+        "category": "SPORTS"
+    },
+    {
+        "id": 284,
+        "title": "Mountain Bike",
+        "description": "High-quality and well-balanced.",
+        "price": 73.11,
+        "email": "seller284@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "SPORTS"
+    },
+    {
+        "id": 285,
+        "title": "Weightlifting Belt",
+        "description": "Lightweight and durable.",
+        "price": 574.81,
+        "email": "seller285@example.com",
+        "location": "RICHMOND",
+        "category": "SPORTS"
+    },
+    {
+        "id": 286,
+        "title": "Basketball Hoop",
+        "description": "Designed for performance and comfort.",
+        "price": 348.16,
+        "email": "seller286@example.com",
+        "location": "NORTH_SHORE",
+        "category": "SPORTS"
+    },
+    {
+        "id": 287,
+        "title": "Waterproof Fitness Tracker",
+        "description": "Ideal for athletes and fitness lovers.",
+        "price": 532.12,
+        "email": "seller287@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "SPORTS"
+    },
+    {
+        "id": 288,
+        "title": "Portable Table Tennis Set",
+        "description": "Designed for performance and comfort.",
+        "price": 275.17,
+        "email": "seller288@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "SPORTS"
+    },
+    {
+        "id": 289,
+        "title": "Camping Stove Kit",
+        "description": "Suitable for all skill levels.",
+        "price": 886.27,
+        "email": "seller289@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "SPORTS"
+    },
+    {
+        "id": 290,
+        "title": "Punching Bag",
+        "description": "Designed for performance and comfort.",
+        "price": 761.21,
+        "email": "seller290@example.com",
+        "location": "RICHMOND",
+        "category": "SPORTS"
+    },
+    {
+        "id": 291,
+        "title": "Foldable Kayak",
+        "description": "Suitable for all skill levels.",
+        "price": 590.25,
+        "email": "seller291@example.com",
+        "location": "RICHMOND",
+        "category": "SPORTS"
+    },
+    {
+        "id": 292,
+        "title": "Hiking Backpack",
+        "description": "Suitable for all skill levels.",
+        "price": 203.13,
+        "email": "seller292@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "SPORTS"
+    },
+    {
+        "id": 293,
+        "title": "Tennis Racket Set",
+        "description": "High-quality and well-balanced.",
+        "price": 855.79,
+        "email": "seller293@example.com",
+        "location": "NORTH_SHORE",
+        "category": "SPORTS"
+    },
+    {
+        "id": 294,
+        "title": "Resistance Bands",
+        "description": "Suitable for all skill levels.",
+        "price": 956.94,
+        "email": "seller294@example.com",
+        "location": "BURNABY",
+        "category": "SPORTS"
+    },
+    {
+        "id": 295,
+        "title": "Treadmill",
+        "description": "Suitable for all skill levels.",
+        "price": 57.54,
+        "email": "seller295@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "SPORTS"
+    },
+    {
+        "id": 296,
+        "title": "Yoga Mat",
+        "description": "Lightweight and durable.",
+        "price": 675.53,
+        "email": "seller296@example.com",
+        "location": "RICHMOND",
+        "category": "SPORTS"
+    },
+    {
+        "id": 297,
+        "title": "Soccer Ball and Cleats",
+        "description": "Lightweight and durable.",
+        "price": 37.27,
+        "email": "seller297@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "SPORTS"
+    },
+    {
+        "id": 298,
+        "title": "Adjustable Dumbbells",
+        "description": "High-quality and well-balanced.",
+        "price": 169.38,
+        "email": "seller298@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "SPORTS"
+    },
+    {
+        "id": 299,
+        "title": "Mountain Bike",
+        "description": "Lightweight and durable.",
+        "price": 881.35,
+        "email": "seller299@example.com",
+        "location": "RICHMOND",
+        "category": "SPORTS"
+    },
+    {
+        "id": 300,
+        "title": "Weightlifting Belt",
+        "description": "Designed for performance and comfort.",
+        "price": 439.91,
+        "email": "seller300@example.com",
+        "location": "BURNABY",
+        "category": "SPORTS"
+    },
+    {
+        "id": 301,
+        "title": "Decorative Throw Pillows",
+        "description": "Well-maintained and fully functional.",
+        "price": 375.84,
+        "email": "seller301@example.com",
+        "location": "RICHMOND",
+        "category": "HOME"
+    },
+    {
+        "id": 302,
+        "title": "High-Pressure Showerhead",
+        "description": "Adds a touch of elegance to any home.",
+        "price": 426.33,
+        "email": "seller302@example.com",
+        "location": "NORTH_SHORE",
+        "category": "HOME"
+    },
+    {
+        "id": 303,
+        "title": "Stainless Steel Dish Rack",
+        "description": "Adds a touch of elegance to any home.",
+        "price": 363.46,
+        "email": "seller303@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "HOME"
+    },
+    {
+        "id": 304,
+        "title": "Scented Candle Collection",
+        "description": "Adds a touch of elegance to any home.",
+        "price": 345.49,
+        "email": "seller304@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "HOME"
+    },
+    {
+        "id": 305,
+        "title": "Smart Thermostat",
+        "description": "Adds a touch of elegance to any home.",
+        "price": 704.83,
+        "email": "seller305@example.com",
+        "location": "BURNABY",
+        "category": "HOME"
+    },
+    {
+        "id": 306,
+        "title": "Glass Food Storage Containers",
+        "description": "Modern design with practical features.",
+        "price": 96.28,
+        "email": "seller306@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "HOME"
+    },
+    {
+        "id": 307,
+        "title": "Digital Air Fryer",
+        "description": "Modern design with practical features.",
+        "price": 937.81,
+        "email": "seller307@example.com",
+        "location": "NORTH_SHORE",
+        "category": "HOME"
+    },
+    {
+        "id": 308,
+        "title": "Electric Coffee Grinder",
+        "description": "Well-maintained and fully functional.",
+        "price": 730.69,
+        "email": "seller308@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "HOME"
+    },
+    {
+        "id": 309,
+        "title": "Non-Stick Cookware Set",
+        "description": "Perfect for everyday use.",
+        "price": 116.96,
+        "email": "seller309@example.com",
+        "location": "NORTH_SHORE",
+        "category": "HOME"
+    },
+    {
+        "id": 310,
+        "title": "Luxury Cotton Bed Sheets",
+        "description": "Adds a touch of elegance to any home.",
+        "price": 846.0,
+        "email": "seller310@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "HOME"
+    },
+    {
+        "id": 311,
+        "title": "Robot Vacuum",
+        "description": "High-quality build, made to last.",
+        "price": 497.66,
+        "email": "seller311@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "HOME"
+    },
+    {
+        "id": 312,
+        "title": "Kitchen Knife Set",
+        "description": "High-quality build, made to last.",
+        "price": 564.93,
+        "email": "seller312@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "HOME"
+    },
+    {
+        "id": 313,
+        "title": "Minimalist Wall Clock",
+        "description": "Well-maintained and fully functional.",
+        "price": 228.15,
+        "email": "seller313@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "HOME"
+    },
+    {
+        "id": 314,
+        "title": "Ultrasonic Humidifier",
+        "description": "Modern design with practical features.",
+        "price": 559.86,
+        "email": "seller314@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "HOME"
+    },
+    {
+        "id": 315,
+        "title": "Handwoven Area Rug",
+        "description": "Modern design with practical features.",
+        "price": 487.4,
+        "email": "seller315@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "HOME"
+    },
+    {
+        "id": 316,
+        "title": "Decorative Throw Pillows",
+        "description": "Well-maintained and fully functional.",
+        "price": 696.5,
+        "email": "seller316@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "HOME"
+    },
+    {
+        "id": 317,
+        "title": "High-Pressure Showerhead",
+        "description": "Adds a touch of elegance to any home.",
+        "price": 36.59,
+        "email": "seller317@example.com",
+        "location": "BURNABY",
+        "category": "HOME"
+    },
+    {
+        "id": 318,
+        "title": "Stainless Steel Dish Rack",
+        "description": "Modern design with practical features.",
+        "price": 957.62,
+        "email": "seller318@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "HOME"
+    },
+    {
+        "id": 319,
+        "title": "Scented Candle Collection",
+        "description": "Well-maintained and fully functional.",
+        "price": 160.41,
+        "email": "seller319@example.com",
+        "location": "NORTH_SHORE",
+        "category": "HOME"
+    },
+    {
+        "id": 320,
+        "title": "Smart Thermostat",
+        "description": "High-quality build, made to last.",
+        "price": 858.06,
+        "email": "seller320@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "HOME"
+    },
+    {
+        "id": 321,
+        "title": "Glass Food Storage Containers",
+        "description": "Adds a touch of elegance to any home.",
+        "price": 578.38,
+        "email": "seller321@example.com",
+        "location": "BURNABY",
+        "category": "HOME"
+    },
+    {
+        "id": 322,
+        "title": "Digital Air Fryer",
+        "description": "High-quality build, made to last.",
+        "price": 998.03,
+        "email": "seller322@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "HOME"
+    },
+    {
+        "id": 323,
+        "title": "Electric Coffee Grinder",
+        "description": "Perfect for everyday use.",
+        "price": 402.33,
+        "email": "seller323@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "HOME"
+    },
+    {
+        "id": 324,
+        "title": "Non-Stick Cookware Set",
+        "description": "Adds a touch of elegance to any home.",
+        "price": 573.7,
+        "email": "seller324@example.com",
+        "location": "RICHMOND",
+        "category": "HOME"
+    },
+    {
+        "id": 325,
+        "title": "Luxury Cotton Bed Sheets",
+        "description": "Perfect for everyday use.",
+        "price": 613.55,
+        "email": "seller325@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "HOME"
+    },
+    {
+        "id": 326,
+        "title": "Robot Vacuum",
+        "description": "Well-maintained and fully functional.",
+        "price": 926.86,
+        "email": "seller326@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "HOME"
+    },
+    {
+        "id": 327,
+        "title": "Kitchen Knife Set",
+        "description": "High-quality build, made to last.",
+        "price": 205.31,
+        "email": "seller327@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "HOME"
+    },
+    {
+        "id": 328,
+        "title": "Minimalist Wall Clock",
+        "description": "Well-maintained and fully functional.",
+        "price": 160.96,
+        "email": "seller328@example.com",
+        "location": "RICHMOND",
+        "category": "HOME"
+    },
+    {
+        "id": 329,
+        "title": "Ultrasonic Humidifier",
+        "description": "Perfect for everyday use.",
+        "price": 752.25,
+        "email": "seller329@example.com",
+        "location": "NORTH_SHORE",
+        "category": "HOME"
+    },
+    {
+        "id": 330,
+        "title": "Handwoven Area Rug",
+        "description": "Well-maintained and fully functional.",
+        "price": 663.9,
+        "email": "seller330@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "HOME"
+    },
+    {
+        "id": 331,
+        "title": "DIY Electronics Kit",
+        "description": "Unique and hard to find.",
+        "price": 628.38,
+        "email": "seller331@example.com",
+        "location": "NORTH_SHORE",
+        "category": "MISCELLANEOUS"
+    },
+    {
+        "id": 332,
+        "title": "Hand-Carved Wooden Statue",
+        "description": "One-of-a-kind item with character.",
+        "price": 678.2,
+        "email": "seller332@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "MISCELLANEOUS"
+    },
+    {
+        "id": 333,
+        "title": "Vintage Postcard Set",
+        "description": "Well-preserved and in great condition.",
+        "price": 452.4,
+        "email": "seller333@example.com",
+        "location": "RICHMOND",
+        "category": "MISCELLANEOUS"
+    },
+    {
+        "id": 334,
+        "title": "Wireless Mini Projector",
+        "description": "Well-preserved and in great condition.",
+        "price": 579.03,
+        "email": "seller334@example.com",
+        "location": "RICHMOND",
+        "category": "MISCELLANEOUS"
+    },
+    {
+        "id": 335,
+        "title": "Personalized Notebook",
+        "description": "Well-preserved and in great condition.",
+        "price": 555.72,
+        "email": "seller335@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "MISCELLANEOUS"
+    },
+    {
+        "id": 336,
+        "title": "Customized Keychains",
+        "description": "One-of-a-kind item with character.",
+        "price": 655.59,
+        "email": "seller336@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "MISCELLANEOUS"
+    },
+    {
+        "id": 337,
+        "title": "Vinyl Record Collection",
+        "description": "Collectible item with great value.",
+        "price": 340.66,
+        "email": "seller337@example.com",
+        "location": "BURNABY",
+        "category": "MISCELLANEOUS"
+    },
+    {
+        "id": 338,
+        "title": "Solar Power Bank",
+        "description": "Well-preserved and in great condition.",
+        "price": 949.81,
+        "email": "seller338@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "MISCELLANEOUS"
+    },
+    {
+        "id": 339,
+        "title": "Miniature Bonsai Tree Kit",
+        "description": "Unique and hard to find.",
+        "price": 235.25,
+        "email": "seller339@example.com",
+        "location": "BURNABY",
+        "category": "MISCELLANEOUS"
+    },
+    {
+        "id": 340,
+        "title": "Engraved Pocket Watch",
+        "description": "Well-preserved and in great condition.",
+        "price": 423.32,
+        "email": "seller340@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "MISCELLANEOUS"
+    },
+    {
+        "id": 341,
+        "title": "Glow-in-the-Dark Stickers",
+        "description": "Unique and hard to find.",
+        "price": 370.05,
+        "email": "seller341@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "MISCELLANEOUS"
+    },
+    {
+        "id": 342,
+        "title": "3D Printing Filament Pack",
+        "description": "Interesting piece for any collection.",
+        "price": 872.34,
+        "email": "seller342@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "MISCELLANEOUS"
+    },
+    {
+        "id": 343,
+        "title": "Rare Coin Collection",
+        "description": "Collectible item with great value.",
+        "price": 260.97,
+        "email": "seller343@example.com",
+        "location": "RICHMOND",
+        "category": "MISCELLANEOUS"
+    },
+    {
+        "id": 344,
+        "title": "Handmade Wooden Puzzle",
+        "description": "One-of-a-kind item with character.",
+        "price": 107.6,
+        "email": "seller344@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "MISCELLANEOUS"
+    },
+    {
+        "id": 345,
+        "title": "Antique Clock",
+        "description": "One-of-a-kind item with character.",
+        "price": 14.7,
+        "email": "seller345@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "MISCELLANEOUS"
+    },
+    {
+        "id": 346,
+        "title": "DIY Electronics Kit",
+        "description": "Unique and hard to find.",
+        "price": 193.83,
+        "email": "seller346@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "MISCELLANEOUS"
+    },
+    {
+        "id": 347,
+        "title": "Hand-Carved Wooden Statue",
+        "description": "Unique and hard to find.",
+        "price": 617.51,
+        "email": "seller347@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "MISCELLANEOUS"
+    },
+    {
+        "id": 348,
+        "title": "Vintage Postcard Set",
+        "description": "Unique and hard to find.",
+        "price": 887.31,
+        "email": "seller348@example.com",
+        "location": "RICHMOND",
+        "category": "MISCELLANEOUS"
+    },
+    {
+        "id": 349,
+        "title": "Wireless Mini Projector",
+        "description": "Interesting piece for any collection.",
+        "price": 198.13,
+        "email": "seller349@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "MISCELLANEOUS"
+    },
+    {
+        "id": 350,
+        "title": "Personalized Notebook",
+        "description": "Unique and hard to find.",
+        "price": 277.41,
+        "email": "seller350@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "MISCELLANEOUS"
+    },
+    {
+        "id": 351,
+        "title": "Customized Keychains",
+        "description": "Interesting piece for any collection.",
+        "price": 914.86,
+        "email": "seller351@example.com",
+        "location": "RICHMOND",
+        "category": "MISCELLANEOUS"
+    },
+    {
+        "id": 352,
+        "title": "Vinyl Record Collection",
+        "description": "One-of-a-kind item with character.",
+        "price": 714.9,
+        "email": "seller352@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "MISCELLANEOUS"
+    },
+    {
+        "id": 353,
+        "title": "Solar Power Bank",
+        "description": "Collectible item with great value.",
+        "price": 865.74,
+        "email": "seller353@example.com",
+        "location": "NORTH_SHORE",
+        "category": "MISCELLANEOUS"
+    },
+    {
+        "id": 354,
+        "title": "Miniature Bonsai Tree Kit",
+        "description": "Interesting piece for any collection.",
+        "price": 734.02,
+        "email": "seller354@example.com",
+        "location": "NORTH_SHORE",
+        "category": "MISCELLANEOUS"
+    },
+    {
+        "id": 355,
+        "title": "Engraved Pocket Watch",
+        "description": "Collectible item with great value.",
+        "price": 194.56,
+        "email": "seller355@example.com",
+        "location": "NORTH_SHORE",
+        "category": "MISCELLANEOUS"
+    },
+    {
+        "id": 356,
+        "title": "Glow-in-the-Dark Stickers",
+        "description": "Well-preserved and in great condition.",
+        "price": 768.88,
+        "email": "seller356@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "MISCELLANEOUS"
+    },
+    {
+        "id": 357,
+        "title": "3D Printing Filament Pack",
+        "description": "One-of-a-kind item with character.",
+        "price": 227.89,
+        "email": "seller357@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "MISCELLANEOUS"
+    },
+    {
+        "id": 358,
+        "title": "Rare Coin Collection",
+        "description": "Collectible item with great value.",
+        "price": 737.36,
+        "email": "seller358@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "MISCELLANEOUS"
+    },
+    {
+        "id": 359,
+        "title": "Handmade Wooden Puzzle",
+        "description": "Interesting piece for any collection.",
+        "price": 452.75,
+        "email": "seller359@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "MISCELLANEOUS"
+    },
+    {
+        "id": 360,
+        "title": "Antique Clock",
+        "description": "Unique and hard to find.",
+        "price": 19.48,
+        "email": "seller360@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "MISCELLANEOUS"
+    },
+    {
+        "id": 361,
+        "title": "Baby Swing Chair",
+        "description": "Made with baby-friendly materials.",
+        "price": 696.77,
+        "email": "seller361@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "KIDS_BABY"
+    },
+    {
+        "id": 362,
+        "title": "Bath Time Toy Bundle",
+        "description": "Perfect for early learning and development.",
+        "price": 814.03,
+        "email": "seller362@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "KIDS_BABY"
+    },
+    {
+        "id": 363,
+        "title": "Convertible Crib",
+        "description": "Safe and comfortable for babies.",
+        "price": 193.64,
+        "email": "seller363@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "KIDS_BABY"
+    },
+    {
+        "id": 364,
+        "title": "Crawling Play Mat",
+        "description": "Safe and comfortable for babies.",
+        "price": 581.09,
+        "email": "seller364@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "KIDS_BABY"
+    },
+    {
+        "id": 365,
+        "title": "Portable Baby Changing Station",
+        "description": "Safe and comfortable for babies.",
+        "price": 975.47,
+        "email": "seller365@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "KIDS_BABY"
+    },
+    {
+        "id": 366,
+        "title": "Infant Car Seat",
+        "description": "Lightweight and easy to handle.",
+        "price": 499.76,
+        "email": "seller366@example.com",
+        "location": "BURNABY",
+        "category": "KIDS_BABY"
+    },
+    {
+        "id": 367,
+        "title": "Toddler Puzzle Pack",
+        "description": "Lightweight and easy to handle.",
+        "price": 343.17,
+        "email": "seller367@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "KIDS_BABY"
+    },
+    {
+        "id": 368,
+        "title": "Stuffed Animal Friends Set",
+        "description": "Perfect for early learning and development.",
+        "price": 958.09,
+        "email": "seller368@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "KIDS_BABY"
+    },
+    {
+        "id": 369,
+        "title": "Baby Stroller",
+        "description": "Perfect for early learning and development.",
+        "price": 828.94,
+        "email": "seller369@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "KIDS_BABY"
+    },
+    {
+        "id": 370,
+        "title": "Soft Storybook Collection",
+        "description": "Lightweight and easy to handle.",
+        "price": 689.76,
+        "email": "seller370@example.com",
+        "location": "BURNABY",
+        "category": "KIDS_BABY"
+    },
+    {
+        "id": 371,
+        "title": "Educational Toy Set",
+        "description": "Perfect for early learning and development.",
+        "price": 392.59,
+        "email": "seller371@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "KIDS_BABY"
+    },
+    {
+        "id": 372,
+        "title": "Baby Monitor with Camera",
+        "description": "Perfect for early learning and development.",
+        "price": 270.7,
+        "email": "seller372@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "KIDS_BABY"
+    },
+    {
+        "id": 373,
+        "title": "Teething Ring Bundle",
+        "description": "Made with baby-friendly materials.",
+        "price": 570.42,
+        "email": "seller373@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "KIDS_BABY"
+    },
+    {
+        "id": 374,
+        "title": "Baby Bottle Warmer",
+        "description": "Safe and comfortable for babies.",
+        "price": 807.81,
+        "email": "seller374@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "KIDS_BABY"
+    },
+    {
+        "id": 375,
+        "title": "Soft Plush Blanket",
+        "description": "Perfect for early learning and development.",
+        "price": 547.77,
+        "email": "seller375@example.com",
+        "location": "BURNABY",
+        "category": "KIDS_BABY"
+    },
+    {
+        "id": 376,
+        "title": "Baby Swing Chair",
+        "description": "Safe and comfortable for babies.",
+        "price": 434.18,
+        "email": "seller376@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "KIDS_BABY"
+    },
+    {
+        "id": 377,
+        "title": "Bath Time Toy Bundle",
+        "description": "Perfect for early learning and development.",
+        "price": 731.82,
+        "email": "seller377@example.com",
+        "location": "NORTH_SHORE",
+        "category": "KIDS_BABY"
+    },
+    {
+        "id": 378,
+        "title": "Convertible Crib",
+        "description": "Perfect for early learning and development.",
+        "price": 782.06,
+        "email": "seller378@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "KIDS_BABY"
+    },
+    {
+        "id": 379,
+        "title": "Crawling Play Mat",
+        "description": "Made with baby-friendly materials.",
+        "price": 319.5,
+        "email": "seller379@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "KIDS_BABY"
+    },
+    {
+        "id": 380,
+        "title": "Portable Baby Changing Station",
+        "description": "Perfect for early learning and development.",
+        "price": 342.53,
+        "email": "seller380@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "KIDS_BABY"
+    },
+    {
+        "id": 381,
+        "title": "Infant Car Seat",
+        "description": "Enhances motor skills and creativity.",
+        "price": 688.44,
+        "email": "seller381@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "KIDS_BABY"
+    },
+    {
+        "id": 382,
+        "title": "Toddler Puzzle Pack",
+        "description": "Perfect for early learning and development.",
+        "price": 457.51,
+        "email": "seller382@example.com",
+        "location": "RICHMOND",
+        "category": "KIDS_BABY"
+    },
+    {
+        "id": 383,
+        "title": "Stuffed Animal Friends Set",
+        "description": "Perfect for early learning and development.",
+        "price": 265.2,
+        "email": "seller383@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "KIDS_BABY"
+    },
+    {
+        "id": 384,
+        "title": "Baby Stroller",
+        "description": "Enhances motor skills and creativity.",
+        "price": 290.59,
+        "email": "seller384@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "KIDS_BABY"
+    },
+    {
+        "id": 385,
+        "title": "Soft Storybook Collection",
+        "description": "Perfect for early learning and development.",
+        "price": 867.7,
+        "email": "seller385@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "KIDS_BABY"
+    },
+    {
+        "id": 386,
+        "title": "Educational Toy Set",
+        "description": "Made with baby-friendly materials.",
+        "price": 829.15,
+        "email": "seller386@example.com",
+        "location": "NORTH_SHORE",
+        "category": "KIDS_BABY"
+    },
+    {
+        "id": 387,
+        "title": "Baby Monitor with Camera",
+        "description": "Made with baby-friendly materials.",
+        "price": 227.63,
+        "email": "seller387@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "KIDS_BABY"
+    },
+    {
+        "id": 388,
+        "title": "Teething Ring Bundle",
+        "description": "Enhances motor skills and creativity.",
+        "price": 103.72,
+        "email": "seller388@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "KIDS_BABY"
+    },
+    {
+        "id": 389,
+        "title": "Baby Bottle Warmer",
+        "description": "Perfect for early learning and development.",
+        "price": 868.85,
+        "email": "seller389@example.com",
+        "location": "RICHMOND",
+        "category": "KIDS_BABY"
+    },
+    {
+        "id": 390,
+        "title": "Soft Plush Blanket",
+        "description": "Safe and comfortable for babies.",
+        "price": 875.47,
+        "email": "seller390@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "KIDS_BABY"
+    },
+    {
+        "id": 391,
+        "title": "Treadmill",
+        "description": "Essential for a healthy lifestyle.",
+        "price": 310.71,
+        "email": "seller391@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "HEALTH_FITNESS"
+    },
+    {
+        "id": 392,
+        "title": "Protein Powder Sampler",
+        "description": "Durable and built to last.",
+        "price": 480.82,
+        "email": "seller392@example.com",
+        "location": "NORTH_SHORE",
+        "category": "HEALTH_FITNESS"
+    },
+    {
+        "id": 393,
+        "title": "Adjustable Dumbbells",
+        "description": "Great for home workouts or gym use.",
+        "price": 257.65,
+        "email": "seller393@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "HEALTH_FITNESS"
+    },
+    {
+        "id": 394,
+        "title": "Theragun Massage Device",
+        "description": "Designed for comfort and efficiency.",
+        "price": 606.46,
+        "email": "seller394@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "HEALTH_FITNESS"
+    },
+    {
+        "id": 395,
+        "title": "Jump Rope with Digital Counter",
+        "description": "Essential for a healthy lifestyle.",
+        "price": 878.89,
+        "email": "seller395@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "HEALTH_FITNESS"
+    },
+    {
+        "id": 396,
+        "title": "Calisthenics Training Rings",
+        "description": "Great for home workouts or gym use.",
+        "price": 488.54,
+        "email": "seller396@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "HEALTH_FITNESS"
+    },
+    {
+        "id": 397,
+        "title": "Ergonomic Running Belt",
+        "description": "Designed for comfort and efficiency.",
+        "price": 346.32,
+        "email": "seller397@example.com",
+        "location": "BURNABY",
+        "category": "HEALTH_FITNESS"
+    },
+    {
+        "id": 398,
+        "title": "Foam Roller for Muscle Recovery",
+        "description": "Great for home workouts or gym use.",
+        "price": 933.5,
+        "email": "seller398@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "HEALTH_FITNESS"
+    },
+    {
+        "id": 399,
+        "title": "Resistance Band Set",
+        "description": "Essential for a healthy lifestyle.",
+        "price": 819.78,
+        "email": "seller399@example.com",
+        "location": "RICHMOND",
+        "category": "HEALTH_FITNESS"
+    },
+    {
+        "id": 400,
+        "title": "Smart Scale",
+        "description": "Essential for a healthy lifestyle.",
+        "price": 100.25,
+        "email": "seller400@example.com",
+        "location": "BURNABY",
+        "category": "HEALTH_FITNESS"
+    },
+    {
+        "id": 401,
+        "title": "Compact Rowing Machine",
+        "description": "Great for home workouts or gym use.",
+        "price": 216.13,
+        "email": "seller401@example.com",
+        "location": "NORTH_SHORE",
+        "category": "HEALTH_FITNESS"
+    },
+    {
+        "id": 402,
+        "title": "Yoga Stretching Strap",
+        "description": "Durable and built to last.",
+        "price": 692.96,
+        "email": "seller402@example.com",
+        "location": "NORTH_SHORE",
+        "category": "HEALTH_FITNESS"
+    },
+    {
+        "id": 403,
+        "title": "Wearable Heart Rate Monitor",
+        "description": "Designed for comfort and efficiency.",
+        "price": 854.16,
+        "email": "seller403@example.com",
+        "location": "RICHMOND",
+        "category": "HEALTH_FITNESS"
+    },
+    {
+        "id": 404,
+        "title": "Ab Roller Wheel",
+        "description": "Essential for a healthy lifestyle.",
+        "price": 229.86,
+        "email": "seller404@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "HEALTH_FITNESS"
+    },
+    {
+        "id": 405,
+        "title": "Hydration Tracking Water Bottle",
+        "description": "Essential for a healthy lifestyle.",
+        "price": 751.57,
+        "email": "seller405@example.com",
+        "location": "RICHMOND",
+        "category": "HEALTH_FITNESS"
+    },
+    {
+        "id": 406,
+        "title": "Treadmill",
+        "description": "Essential for a healthy lifestyle.",
+        "price": 930.89,
+        "email": "seller406@example.com",
+        "location": "NORTH_SHORE",
+        "category": "HEALTH_FITNESS"
+    },
+    {
+        "id": 407,
+        "title": "Protein Powder Sampler",
+        "description": "Durable and built to last.",
+        "price": 507.89,
+        "email": "seller407@example.com",
+        "location": "NORTH_SHORE",
+        "category": "HEALTH_FITNESS"
+    },
+    {
+        "id": 408,
+        "title": "Adjustable Dumbbells",
+        "description": "Designed for comfort and efficiency.",
+        "price": 449.6,
+        "email": "seller408@example.com",
+        "location": "NEW_WESTMINSTER",
+        "category": "HEALTH_FITNESS"
+    },
+    {
+        "id": 409,
+        "title": "Theragun Massage Device",
+        "description": "Lightweight and easy to store.",
+        "price": 283.12,
+        "email": "seller409@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "HEALTH_FITNESS"
+    },
+    {
+        "id": 410,
+        "title": "Jump Rope with Digital Counter",
+        "description": "Designed for comfort and efficiency.",
+        "price": 35.69,
+        "email": "seller410@example.com",
+        "location": "NORTH_SHORE",
+        "category": "HEALTH_FITNESS"
+    },
+    {
+        "id": 411,
+        "title": "Calisthenics Training Rings",
+        "description": "Essential for a healthy lifestyle.",
+        "price": 878.13,
+        "email": "seller411@example.com",
+        "location": "RICHMOND",
+        "category": "HEALTH_FITNESS"
+    },
+    {
+        "id": 412,
+        "title": "Ergonomic Running Belt",
+        "description": "Great for home workouts or gym use.",
+        "price": 407.43,
+        "email": "seller412@example.com",
+        "location": "RICHMOND",
+        "category": "HEALTH_FITNESS"
+    },
+    {
+        "id": 413,
+        "title": "Foam Roller for Muscle Recovery",
+        "description": "Lightweight and easy to store.",
+        "price": 406.0,
+        "email": "seller413@example.com",
+        "location": "RICHMOND",
+        "category": "HEALTH_FITNESS"
+    },
+    {
+        "id": 414,
+        "title": "Resistance Band Set",
+        "description": "Essential for a healthy lifestyle.",
+        "price": 109.34,
+        "email": "seller414@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "HEALTH_FITNESS"
+    },
+    {
+        "id": 415,
+        "title": "Smart Scale",
+        "description": "Essential for a healthy lifestyle.",
+        "price": 917.78,
+        "email": "seller415@example.com",
+        "location": "TRICITIES_PITT_MAPLE_RIDGE",
+        "category": "HEALTH_FITNESS"
+    },
+    {
+        "id": 416,
+        "title": "Compact Rowing Machine",
+        "description": "Designed for comfort and efficiency.",
+        "price": 451.68,
+        "email": "seller416@example.com",
+        "location": "RICHMOND",
+        "category": "HEALTH_FITNESS"
+    },
+    {
+        "id": 417,
+        "title": "Yoga Stretching Strap",
+        "description": "Great for home workouts or gym use.",
+        "price": 649.4,
+        "email": "seller417@example.com",
+        "location": "BURNABY",
+        "category": "HEALTH_FITNESS"
+    },
+    {
+        "id": 418,
+        "title": "Wearable Heart Rate Monitor",
+        "description": "Great for home workouts or gym use.",
+        "price": 64.87,
+        "email": "seller418@example.com",
+        "location": "CITY_OF_VANCOUVER",
+        "category": "HEALTH_FITNESS"
+    },
+    {
+        "id": 419,
+        "title": "Ab Roller Wheel",
+        "description": "Essential for a healthy lifestyle.",
+        "price": 881.91,
+        "email": "seller419@example.com",
+        "location": "DELTA_SURREY_LANGLEY",
+        "category": "HEALTH_FITNESS"
+    },
+    {
+        "id": 420,
+        "title": "Hydration Tracking Water Bottle",
+        "description": "Lightweight and easy to store.",
+        "price": 350.48,
+        "email": "seller420@example.com",
+        "location": "RICHMOND",
+        "category": "HEALTH_FITNESS"
+    }
+]

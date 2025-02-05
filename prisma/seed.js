@@ -22,9 +22,9 @@ const __dirname = path.dirname(__filename);
 const dummyUsers = JSON.parse(
   fs.readFileSync(path.resolve(__dirname, "../data/dummy_users.json"), "utf-8")
 );
-const dummyListings = JSON.parse(
+const productListings = JSON.parse(
   fs.readFileSync(
-    path.resolve(__dirname, "../data/dummy_listings.json"),
+    path.resolve(__dirname, "../data/product_listings.json"),
     "utf-8"
   )
 );
@@ -60,17 +60,11 @@ async function main() {
 
   // Seed listings
   await Promise.all(
-    dummyListings.map((listing) => {
+    productListings.map((listing) => {
       const randomUserId = userIds[Math.floor(Math.random() * userIds.length)];
-      const randomCategory =
-        Object.values(Category)[
-          Math.floor(Math.random() * Object.values(Category).length)
-        ];
-      const randomLocation =
-        Object.values(Location)[
-          Math.floor(Math.random() * Object.values(Location).length)
-        ];
-      const randomPostalCode = getRandomPostalCode(randomLocation);
+      const location = listing.location;
+      const city = location.toLowerCase().replace(/_/g, " ");
+      const randomPostalCode = getRandomPostalCode(location);
 
       return prisma.listing.create({
         data: {
@@ -79,9 +73,9 @@ async function main() {
           price: listing.price,
           email: listing.email,
           userId: randomUserId,
-          category: randomCategory,
-          location: randomLocation,
-          city: randomLocation, // Make city the same as location
+          category: listing.category,
+          location: location,
+          city: city,
           postalCode: randomPostalCode,
           // Add other listing fields if necessary
         },
