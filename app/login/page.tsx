@@ -55,7 +55,7 @@ export default function Login() {
 
       if (response.ok) {
         console.log("Login successful!");
-        router.push("/profile");
+        router.push("/");
       } else {
         const result = await response.json();
         setError(result.message || "Login failed");

@@ -1,144 +1,3 @@
-// "use client";
-
-// import { useEffect, useState } from "react";
-// import { useParams, useRouter, useSearchParams } from "next/navigation";
-// import { useDispatch, useSelector } from "react-redux";
-// import { RootState, AppDispatch } from "@/app/store";
-// import { geocode } from "@/app/lib/geocode";
-// import { MapContainer, TileLayer, Circle } from "react-leaflet";
-// import "leaflet/dist/leaflet.css";
-// import { setCurrentListingIndex } from "@/app/store/searchResultsSlice";
-// import SaveListingButton from "@/app/components/SaveListingButton";
-
-// export default function ListingPage() {
-//   const { listingId } = useParams();
-//   const router = useRouter();
-//   const searchParams = useSearchParams();
-//   const dispatch = useDispatch<AppDispatch>();
-//   const listings = useSelector(
-//     (state: RootState) => state.searchResults.listings
-//   );
-//   const [currentListingIndex, setCurrentListingIndexState] = useState<
-//     number | undefined
-//   >(undefined);
-//   const [coordinates, setCoordinates] = useState<{
-//     lat: number;
-//     lng: number;
-//   } | null>(null);
-//   const [loading, setLoading] = useState(true);
-
-//   useEffect(() => {
-//     const index = listings.findIndex((listing) => listing.id === listingId);
-//     if (index !== -1) {
-//       setCurrentListingIndexState(index);
-//       dispatch(setCurrentListingIndex(index));
-//     }
-//   }, [listingId, listings, dispatch]);
-
-//   useEffect(() => {
-//     if (currentListingIndex !== undefined && listings[currentListingIndex]) {
-//       const listing = listings[currentListingIndex];
-//       const fetchCoordinates = async () => {
-//         const coords = await geocode(listing.postalCode, listing.city);
-//         setCoordinates(coords);
-//         setLoading(false);
-//         console.log("Coordinates:", coords);
-//       };
-//       fetchCoordinates();
-//     }
-//   }, [currentListingIndex, listings]);
-
-//   if (
-//     loading ||
-//     currentListingIndex === undefined ||
-//     !listings[currentListingIndex]
-//   ) {
-//     return <div>Loading...</div>;
-//   }
-
-//   const listing = listings[currentListingIndex];
-
-//   const handlePrevious = async () => {
-//     if (currentListingIndex > 0) {
-//       const previousListingId = listings[currentListingIndex - 1].id;
-//       router.push(`/listings/${previousListingId}`);
-//     }
-//   };
-
-//   const handleNext = async () => {
-//     if (currentListingIndex < listings.length - 1) {
-//       const nextListingId = listings[currentListingIndex + 1].id;
-//       router.push(`/listings/${nextListingId}`);
-//     }
-//   };
-
-//   const handleBackToResults = () => {
-//     const query = searchParams.get("query") || "";
-//     const category = searchParams.get("category") || "All";
-//     const location = searchParams.get("location") || "All";
-//     router.push(
-//       `/search-listings?query=${query}&category=${category}&location=${location}&fromListingPage=true`
-//     );
-//   };
-
-//   return (
-//     <div style={{ display: "flex" }}>
-//       <div style={{ flex: 1 }}>
-//         <h1>{listing.title}</h1>
-//         <div>
-//           {listing.imageUrls && listing.imageUrls.length > 0 ? (
-//             listing.imageUrls.map((url, index) => (
-//               <img
-//                 key={index}
-//                 src={url}
-//                 alt={`Image ${index + 1}`}
-//                 width="100"
-//                 height="100"
-//               />
-//             ))
-//           ) : (
-//             <img
-//               src="/placeholder.jpg"
-//               alt="Placeholder"
-//               width="100"
-//               height="100"
-//             />
-//           )}
-//         </div>
-//         <p>{listing.description}</p>
-//         <p>Posted on: {new Date(listing.createdAt).toLocaleDateString()}</p>
-//         <p>Last updated: {new Date(listing.updatedAt).toLocaleDateString()}</p>
-//         <SaveListingButton listing={listing} />
-//         <button onClick={handlePrevious} disabled={currentListingIndex === 0}>
-//           Previous
-//         </button>
-//         <button onClick={handleBackToResults}>Back to Results</button>
-//         <button
-//           onClick={handleNext}
-//           disabled={currentListingIndex === listings.length - 1}
-//         >
-//           Next
-//         </button>
-//       </div>
-//       {coordinates && (
-//         <div style={{ flex: 1 }}>
-//           <MapContainer
-//             center={[coordinates.lat, coordinates.lng]}
-//             zoom={12}
-//             style={{ height: "300px", width: "300px" }}
-//           >
-//             <TileLayer
-//               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-//               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-//             />
-//             <Circle center={[coordinates.lat, coordinates.lng]} radius={1500} />
-//           </MapContainer>
-//         </div>
-//       )}
-//     </div>
-//   );
-// }
-
 "use client";
 
 import { useEffect, useState } from "react";
@@ -161,6 +20,18 @@ import {
 import { Skeleton } from "@/components/ui/skeleton";
 import { ChevronLeft, ChevronRight, ArrowLeft } from "lucide-react";
 
+interface Listing {
+  id: string;
+  title: string;
+  description: string;
+  price: number;
+  imageUrls: string[];
+  createdAt: string;
+  updatedAt: string;
+  city: string;
+  postalCode: string;
+}
+
 export default function ListingPage() {
   const { listingId } = useParams();
   const router = useRouter();
@@ -172,23 +43,37 @@ export default function ListingPage() {
   const [currentListingIndex, setCurrentListingIndexState] = useState<
     number | undefined
   >(undefined);
+  const [listing, setListing] = useState<Listing | null>(null);
   const [coordinates, setCoordinates] = useState<{
     lat: number;
     lng: number;
   } | null>(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const index = listings.findIndex((listing) => listing.id === listingId);
-    if (index !== -1) {
-      setCurrentListingIndexState(index);
-      dispatch(setCurrentListingIndex(index));
-    }
-  }, [listingId, listings, dispatch]);
+  const fromSearchPage = searchParams.get("fromListingPage") === "true";
 
   useEffect(() => {
-    if (currentListingIndex !== undefined && listings[currentListingIndex]) {
-      const listing = listings[currentListingIndex];
+    if (fromSearchPage) {
+      const index = listings.findIndex((listing) => listing.id === listingId);
+      if (index !== -1) {
+        setCurrentListingIndexState(index);
+        dispatch(setCurrentListingIndex(index));
+        setListing(listings[index]);
+      }
+    } else {
+      // Fetch listing data if not available in searchResultsSlice
+      const fetchListing = async () => {
+        const res = await fetch(`/api/listings/${listingId}`);
+        const data = await res.json();
+        setListing(data);
+        setLoading(false);
+      };
+      fetchListing();
+    }
+  }, [listingId, listings, dispatch, fromSearchPage]);
+
+  useEffect(() => {
+    if (listing) {
       const fetchCoordinates = async () => {
         const coords = await geocode(listing.postalCode, listing.city);
         setCoordinates(coords);
@@ -196,13 +81,9 @@ export default function ListingPage() {
       };
       fetchCoordinates();
     }
-  }, [currentListingIndex, listings]);
+  }, [listing]);
 
-  if (
-    loading ||
-    currentListingIndex === undefined ||
-    !listings[currentListingIndex]
-  ) {
+  if (loading || !listing) {
     return (
       <div className="container mx-auto p-4">
         <Card>
@@ -219,19 +100,17 @@ export default function ListingPage() {
     );
   }
 
-  const listing = listings[currentListingIndex];
-
   const handlePrevious = () => {
     if (currentListingIndex > 0) {
       const previousListingId = listings[currentListingIndex - 1].id;
-      router.push(`/listings/${previousListingId}`);
+      router.push(`/listings/${previousListingId}?fromListingPage=true`);
     }
   };
 
   const handleNext = () => {
     if (currentListingIndex < listings.length - 1) {
       const nextListingId = listings[currentListingIndex + 1].id;
-      router.push(`/listings/${nextListingId}`);
+      router.push(`/listings/${nextListingId}?fromListingPage=true`);
     }
   };
 
@@ -242,6 +121,10 @@ export default function ListingPage() {
     router.push(
       `/search-listings?query=${query}&category=${category}&location=${location}&fromListingPage=true`
     );
+  };
+
+  const handleBackToSavedListings = () => {
+    router.push("/profile/saved-listings");
   };
 
   return (
@@ -319,25 +202,33 @@ export default function ListingPage() {
           </div>
         </CardContent>
         <CardFooter className="flex justify-between">
-          <Button onClick={handleBackToResults} variant="outline">
-            <ArrowLeft className="mr-2 h-4 w-4" /> Back to Results
-          </Button>
-          <div className="space-x-2">
-            <Button
-              onClick={handlePrevious}
-              disabled={currentListingIndex === 0}
-              variant="outline"
-            >
-              <ChevronLeft className="mr-2 h-4 w-4" /> Previous
+          {fromSearchPage ? (
+            <>
+              <Button onClick={handleBackToResults} variant="outline">
+                <ArrowLeft className="mr-2 h-4 w-4" /> Back to Results
+              </Button>
+              <div className="space-x-2">
+                <Button
+                  onClick={handlePrevious}
+                  disabled={currentListingIndex === 0}
+                  variant="outline"
+                >
+                  <ChevronLeft className="mr-2 h-4 w-4" /> Previous
+                </Button>
+                <Button
+                  onClick={handleNext}
+                  disabled={currentListingIndex === listings.length - 1}
+                  variant="outline"
+                >
+                  Next <ChevronRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+            </>
+          ) : (
+            <Button onClick={handleBackToSavedListings} variant="outline">
+              <ArrowLeft className="mr-2 h-4 w-4" /> Back to Saved Listings
             </Button>
-            <Button
-              onClick={handleNext}
-              disabled={currentListingIndex === listings.length - 1}
-              variant="outline"
-            >
-              Next <ChevronRight className="ml-2 h-4 w-4" />
-            </Button>
-          </div>
+          )}
         </CardFooter>
       </Card>
     </div>

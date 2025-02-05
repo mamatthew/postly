@@ -1,9 +1,19 @@
+"use client";
 import SearchBar from "./components/SearchBar";
 import CategoryDisplay from "./components/CategoryDisplay";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ShoppingBag } from "lucide-react";
+import { useEffect } from "react";
+import { fetchUserProfile } from "./store/userSlice";
+import { useDispatch } from "react-redux";
+import { AppDispatch } from "./store";
 
 export default function Home() {
+  const dispatch = useDispatch<AppDispatch>();
+  useEffect(() => {
+    dispatch(fetchUserProfile());
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-100 to-white">
       <div className="container mx-auto px-4 py-8">

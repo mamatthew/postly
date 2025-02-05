@@ -20,6 +20,7 @@ import {
   clearUser,
 } from "@/app/store/userSlice";
 import Image from "next/image";
+import { clearSearchResults } from "../store/searchResultsSlice";
 
 export default function Navbar() {
   const dispatch = useDispatch<AppDispatch>();
@@ -42,6 +43,7 @@ export default function Navbar() {
       dispatch(clearUserListings());
       dispatch(clearSavedListings());
       dispatch(clearUser());
+      dispatch(clearSearchResults());
       router.push("/");
     }
   };

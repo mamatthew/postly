@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk, current } from "@reduxjs/toolkit";
 
 export interface Listing {
   imageUrl: string;
@@ -77,6 +77,9 @@ const searchResultSlice = createSlice({
   reducers: {
     clearSearchResults(state) {
       state.listings = [];
+      state.status = "idle";
+      state.currentListingIndex = undefined;
+      state.cursor = null;
     },
     setCurrentListingIndex(state, action) {
       state.currentListingIndex = action.payload;

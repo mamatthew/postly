@@ -98,53 +98,6 @@ export default async function handler(
             limitValue // Fetch one extra listing
           )
         );
-        //     results = await prisma.$queryRaw`
-        //   WITH ranked_listings AS (
-        //     SELECT
-        //       id,
-        //       title,
-        //       description,
-        //       price,
-        //       "createdAt",
-        //       "updatedAt",
-        //       "userId",
-        //       "imageUrls",
-        //       category,
-        //       location,
-        //       "postalCode",
-        //       city,
-        //       ROW_NUMBER() OVER (ORDER BY "createdAt" DESC) AS row_num
-        //     FROM
-        //       "Listing"
-        //     WHERE
-        //       (${categoryValue}::text IS NULL OR "Listing".category = ${categoryValue}::"Category")
-        //       AND (${locationValue}::text IS NULL OR "Listing".location = ${locationValue}::"Location")
-        //   )
-        //   SELECT
-        //     id,
-        //     title,
-        //     description,
-        //     price,
-        //     "createdAt",
-        //     "updatedAt",
-        //     "userId",
-        //     "imageUrls",
-        //     category,
-        //     location,
-        //     "postalCode",
-        //     city
-        //   FROM
-        //     ranked_listings
-        //   WHERE
-        //     (${parsedCursorValue}::timestamp IS NULL OR (
-        //       (${directionValue} = 'next' AND "createdAt" < ${parsedCursorValue}::timestamp) OR
-        //       (${directionValue} = 'prev' AND "createdAt" > ${parsedCursorValue}::timestamp)
-        //     ))
-        //   ORDER BY
-        //     "createdAt" DESC,
-        //     id ASC
-        //   LIMIT ${limitValue + 1};
-        // `;
       } else {
         return res.status(400).json({ error: "Query parameter is required" });
       }
