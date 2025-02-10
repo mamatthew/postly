@@ -103,25 +103,3 @@ Postly is a marketplace application that allows users to browse and upload listi
    ```
 
 2. Open your browser and navigate to `http://localhost:3000`.
-
-### Building for Production
-
-1. Build the application:
-
-   ```sh
-   npm run build
-   ```
-
-2. Start the production server:
-
-   ```sh
-   npm start
-   ```
-
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the MIT License.
