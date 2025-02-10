@@ -12,6 +12,7 @@ WITH ranked_listings AS (
     location,
     "postalCode",
     city,
+    email,
     ROW_NUMBER() OVER (ORDER BY "createdAt" DESC) AS row_num
   FROM
     "Listing"
@@ -31,7 +32,8 @@ SELECT
   category,
   location,
   "postalCode",
-  city
+  city,
+  email
 FROM
   ranked_listings
 WHERE

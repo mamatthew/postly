@@ -30,6 +30,7 @@ interface Listing {
   updatedAt: string;
   city: string;
   postalCode: string;
+  email: string;
 }
 
 export default function ListingPage() {
@@ -196,6 +197,10 @@ export default function ListingPage() {
                 <p>
                   {listing.city}, {listing.postalCode}
                 </p>
+              </div>
+              <div className="bg-gray-100 p-4 rounded-lg">
+                <h3 className="font-semibold mb-2">Contact</h3>
+                <p>{listing.email}</p>
               </div>
               <SaveListingButton listing={listing} />
             </div>

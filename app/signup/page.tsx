@@ -70,7 +70,11 @@ export default function SignupForm() {
           <CardDescription>Create your account to get started</CardDescription>
         </CardHeader>
         <CardContent>
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form
+            onSubmit={handleSubmit}
+            className="space-y-4"
+            autoComplete="off"
+          >
             <div className="space-y-2">
               <Label htmlFor="username">Username</Label>
               <Input
@@ -80,6 +84,7 @@ export default function SignupForm() {
                 value={formData.username}
                 onChange={handleChange}
                 required
+                autoComplete="off"
               />
               {errors.username && (
                 <Alert variant="destructive">
@@ -98,6 +103,7 @@ export default function SignupForm() {
                 value={formData.email}
                 onChange={handleChange}
                 required
+                autoComplete="off"
               />
               {errors.email && (
                 <Alert variant="destructive">

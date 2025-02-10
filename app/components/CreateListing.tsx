@@ -170,7 +170,11 @@ export default function CreateListing() {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form
+            onSubmit={handleSubmit}
+            className="space-y-4"
+            autoComplete="off"
+          >
             <div>
               <Label htmlFor="title">Title</Label>
               <Input
@@ -180,6 +184,7 @@ export default function CreateListing() {
                 onChange={handleChange}
                 required
                 disabled={isLoading}
+                autoComplete="off"
               />
             </div>
             <div>
@@ -191,6 +196,7 @@ export default function CreateListing() {
                 onChange={handleChange}
                 required
                 disabled={isLoading}
+                autoComplete="off"
               />
             </div>
             <div>
@@ -203,6 +209,7 @@ export default function CreateListing() {
                 onChange={handleChange}
                 required
                 disabled={isLoading}
+                autoComplete="off"
               />
             </div>
             <div>
@@ -286,6 +293,7 @@ export default function CreateListing() {
                 onChange={handleChange}
                 disabled={isLoading}
                 required
+                autoComplete="off"
               />
             </div>
             <div>
@@ -297,6 +305,7 @@ export default function CreateListing() {
                 onChange={handleChange}
                 required
                 disabled={isLoading}
+                autoComplete="off"
               />
             </div>
             <div>
@@ -309,6 +318,7 @@ export default function CreateListing() {
                 onChange={handleChange}
                 required
                 disabled={isLoading}
+                autoComplete="off"
               />
             </div>
             <div>

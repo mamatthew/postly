@@ -77,7 +77,11 @@ export default function Login() {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form
+            onSubmit={handleSubmit}
+            className="space-y-4"
+            autoComplete="off"
+          >
             <div className="space-y-2">
               <Label htmlFor="username">Username</Label>
               <Input
@@ -88,6 +92,7 @@ export default function Login() {
                 onChange={handleChange}
                 placeholder="Enter your username"
                 required
+                autoComplete="off"
               />
             </div>
             <div className="space-y-2">
@@ -100,6 +105,7 @@ export default function Login() {
                 onChange={handleChange}
                 placeholder="Enter your password"
                 required
+                autoComplete="off"
               />
             </div>
             {error && (

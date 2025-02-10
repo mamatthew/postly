@@ -19,8 +19,6 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Upload, X, Loader2 } from "lucide-react";
-// Remove sharp import
-// import sharp from "sharp";
 
 interface FormData {
   title: string;
@@ -216,7 +214,7 @@ export default function EditListing() {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <form onSubmit={handleSave} className="space-y-4">
+          <form onSubmit={handleSave} className="space-y-4" autoComplete="off">
             <div>
               <Label htmlFor="title">Title</Label>
               <Input
@@ -226,6 +224,7 @@ export default function EditListing() {
                 onChange={handleChange}
                 required
                 disabled={isLoading}
+                autoComplete="off"
               />
             </div>
             <div>
@@ -237,6 +236,7 @@ export default function EditListing() {
                 onChange={handleChange}
                 required
                 disabled={isLoading}
+                autoComplete="off"
               />
             </div>
             <div>
@@ -249,6 +249,7 @@ export default function EditListing() {
                 onChange={handleChange}
                 required
                 disabled={isLoading}
+                autoComplete="off"
               />
             </div>
             <div>
@@ -331,6 +332,7 @@ export default function EditListing() {
                 value={formData.city}
                 onChange={handleChange}
                 disabled={isLoading}
+                autoComplete="off"
               />
             </div>
             <div>
@@ -342,6 +344,7 @@ export default function EditListing() {
                 onChange={handleChange}
                 required
                 disabled={isLoading}
+                autoComplete="off"
               />
             </div>
             <div>
@@ -354,6 +357,7 @@ export default function EditListing() {
                 onChange={handleChange}
                 required
                 disabled={isLoading}
+                autoComplete="off"
               />
             </div>
             <div>

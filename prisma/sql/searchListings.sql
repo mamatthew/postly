@@ -12,6 +12,7 @@ WITH ranked_listings AS (
     location,
     "postalCode",
     city,
+    email,
     ts_rank_cd(
       setweight(to_tsvector('english', title), 'A') ||
       setweight(to_tsvector('english', description), 'B'),
@@ -38,7 +39,8 @@ SELECT
   location,
   "postalCode",
   city,
-  rank
+  rank,
+  email
 FROM
   ranked_listings
 WHERE

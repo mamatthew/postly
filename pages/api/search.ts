@@ -23,6 +23,7 @@ export interface Listing {
   city: string;
   postalCode: string;
   rank: number | null;
+  email: string;
 }
 
 export default async function handler(

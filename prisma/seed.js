@@ -77,7 +77,6 @@ async function main() {
           location: location,
           city: city,
           postalCode: randomPostalCode,
-          // Add other listing fields if necessary
         },
       });
     })
